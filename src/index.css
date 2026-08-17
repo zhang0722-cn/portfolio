@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #080a0f;
+  --bg-secondary: #0d1117;
+  --bg-card: #111520;
+  --accent: #a8ff78;
+  --accent-blue: #4fc3f7;
+  --text-primary: #f0f0f0;
+  --text-secondary: #8a8f9e;
+  --border: rgba(255, 255, 255, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2f3e;
+  border-radius: 2px;
+}
+
+/* Grain texture overlay */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 40px rgba(168, 255, 120, 0.12);
+}
+.glow-blue {
+  box-shadow: 0 0 40px rgba(79, 195, 247, 0.12);
+}
+
+/* Tag pill */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #8a8f9e;
+}
+
+/* Horizontal scroll for project cards on smaller viewports */
+.project-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.project-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animated border gradient */
+@keyframes border-rotate {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-border {
+  background: linear-gradient(270deg, #a8ff78, #4fc3f7, #a855f7, #a8ff78);
+  background-size: 300% 300%;
+  animation: border-rotate 6s ease infinite;
+}
+
+/* Line clamp */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Video filter */
+.video-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 10, 15, 0.3) 0%,
+    rgba(8, 10, 15, 0.2) 50%,
+    rgba(8, 10, 15, 0.85) 100%
+  );
+}
