@@ -101,7 +101,7 @@ export default function Contact() {
       className="relative min-h-screen flex flex-col justify-between overflow-hidden"
       style={{
         background:
-          'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(168,255,120,0.06) 0%, rgba(8,10,15,0) 70%), #080a0f',
+          'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(168,255,120,0.06) 0%, rgba(5,5,5,0) 70%), #050505',
       }}
     >
       {/* Top border glow */}
@@ -211,7 +211,7 @@ export default function Contact() {
             <a
               href="https://mail.163.com/" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-semibold transition-all duration-300"
-              style={{ background: '#a8ff78', color: '#080a0f' }}
+              style={{ background: '#a8ff78', color: '#050505' }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)';
                 (e.currentTarget as HTMLElement).style.boxShadow =
@@ -222,7 +222,7 @@ export default function Contact() {
                 (e.currentTarget as HTMLElement).style.boxShadow = 'none';
               }}
             >
-              <span className="w-2 h-2 rounded-full bg-[#080a0f] opacity-40 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#050505] opacity-40 animate-pulse" />
               发邮件联系我
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path

@@ -44,9 +44,9 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay, ease: 'easeOut' }}
+      initial={{ opacity: 0, y: 28, filter: 'blur(8px)' }}
+      animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
+      transition={{ duration: 0.9, delay, ease: [0.32, 0.72, 0, 1] }}
     >
       {children}
     </motion.div>
@@ -58,7 +58,7 @@ export default function About() {
     <section
       id="about"
       className="relative py-32"
-      style={{ background: '#080a0f' }}
+      style={{ background: '#050505' }}
     >
       {/* Subtle grid */}
       <div
@@ -85,14 +85,23 @@ export default function About() {
           <FadeIn delay={0.08}>
             <div className="sticky top-24 flex flex-col gap-4">
               {/* Image card */}
+              {/* Double-Bezel 外圈层 */}
               <div
-                className="relative w-full rounded-2xl overflow-hidden"
+                className="p-1.5 rounded-[1.75rem]"
                 style={{
-                  aspectRatio: '3/4',
+                  background: 'rgba(255,255,255,0.03)',
                   border: '1px solid rgba(255,255,255,0.08)',
-                  background: '#0d1117',
+                  boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.08)',
                 }}
               >
+                <div
+                  className="relative w-full rounded-[1.6rem] overflow-hidden"
+                  style={{
+                    aspectRatio: '3/4',
+                    background: '#0a0a0c',
+                    boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.04)',
+                  }}
+                >
                 <img
                   src="portrait.jpg"
                   alt="张浩雷的照片"
@@ -103,7 +112,7 @@ export default function About() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      'linear-gradient(to top, rgba(8,10,15,0.88) 0%, rgba(8,10,15,0.05) 55%, transparent 100%)',
+                      'linear-gradient(to top, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.05) 55%, transparent 100%)',
                   }}
                 />
                 {/* Name badge */}
@@ -119,7 +128,7 @@ export default function About() {
                 <div
                   className="absolute top-4 right-4 text-xs px-3 py-1 rounded-full font-mono"
                   style={{
-                    background: 'rgba(8,10,15,0.7)',
+                    background: 'rgba(5,5,5,0.7)',
                     border: '1px solid rgba(255,255,255,0.1)',
                     color: 'rgba(255,255,255,0.5)',
                     backdropFilter: 'blur(8px)',
@@ -127,13 +136,14 @@ export default function About() {
                 >
                   江西九江
                 </div>
+                </div>
               </div>
 
               {/* Contact card */}
               <div
                 className="rounded-xl p-5"
                 style={{
-                  background: '#0d1117',
+                  background: '#0a0a0c',
                   border: '1px solid rgba(255,255,255,0.07)',
                 }}
               >
@@ -169,7 +179,7 @@ export default function About() {
               </div>
 
               {/* 荣誉证书 */}
-              <div className="rounded-xl p-5" style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}>
+              <div className="rounded-xl p-5" style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}>
                 <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#8a8f9e' }}>
                   荣誉证书
                 </p>
@@ -179,7 +189,7 @@ export default function About() {
               </div>
 
               {/* 其他信息 */}
-              <div className="rounded-xl p-5" style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}>
+              <div className="rounded-xl p-5" style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}>
                 <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#8a8f9e' }}>
                   其他信息
                 </p>
@@ -248,7 +258,7 @@ export default function About() {
                     key={s.label}
                     className="relative p-5 rounded-xl overflow-hidden group transition-all duration-300"
                     style={{
-                      background: '#0d1117',
+                      background: '#0a0a0c',
                       border: '1px solid rgba(255,255,255,0.07)',
                     }}
                     onMouseEnter={(e) => {
@@ -302,7 +312,7 @@ export default function About() {
                           className="w-2.5 h-2.5 rounded-full border-2 transition-all duration-300"
                           style={{
                             borderColor: exp.color,
-                            background: '#080a0f',
+                            background: '#050505',
                           }}
                         />
                       </div>

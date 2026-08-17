@@ -34,7 +34,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center gap-6 px-8" style={{ background: '#080a0f' }}>
+      <div className="min-h-screen flex flex-col items-center justify-center gap-6 px-8" style={{ background: '#050505' }}>
         <h1 className="text-4xl font-bold text-white" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
           项目不存在
         </h1>
@@ -42,7 +42,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
         <a
           href="#projects"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold"
-          style={{ background: '#a8ff78', color: '#080a0f' }}
+          style={{ background: '#a8ff78', color: '#050505' }}
         >
           ← 返回作品集
         </a>
@@ -51,7 +51,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
   }
 
   return (
-    <div className="pt-24" style={{ background: '#080a0f' }}>
+    <div className="pt-24" style={{ background: '#050505' }}>
       <div className="max-w-[1200px] mx-auto px-8">
         {/* Back */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
@@ -75,7 +75,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
             <span
               className="text-xs font-semibold px-3 py-1 rounded-full"
               style={{
-                background: 'rgba(8,10,15,0.7)',
+                background: 'rgba(5,5,5,0.7)',
                 border: `1px solid ${project.accent}40`,
                 color: project.accent,
               }}
@@ -140,7 +140,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
             <img src={project.img} alt={project.title} className="w-full object-cover" style={{ aspectRatio: project.coverRatio ?? '16/9', filter: 'saturate(0.9) contrast(1.05)' }} />
             <div
               className="absolute inset-0"
-              style={{ background: 'linear-gradient(to top, rgba(8,10,15,0.65) 0%, transparent 50%)' }}
+              style={{ background: 'linear-gradient(to top, rgba(5,5,5,0.65) 0%, transparent 50%)' }}
             />
           </div>
         </motion.div>
@@ -151,7 +151,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
             <div
               key={s.label}
               className="p-6 rounded-2xl"
-              style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}
+              style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}
             >
               <div
                 className="text-3xl font-bold mb-2"
@@ -244,7 +244,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <div
                 key={i}
                 className="p-8 rounded-2xl"
-                style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}
+                style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}
               >
                 <div className="flex items-center gap-4 mb-5">
                   <span
@@ -280,7 +280,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <div
                 key={i}
                 className="p-6 rounded-2xl flex flex-col gap-3"
-                style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}
+                style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}
               >
                 <span className="text-xs font-semibold" style={{ color: project.accent }}>
                   成果 {String(i + 1).padStart(2, '0')}
@@ -331,7 +331,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <a
                 href={`#/project/${prev.id}`}
                 className="group p-6 rounded-2xl transition-all duration-300"
-                style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}
+                style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = `${prev.accent}35`)}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)')}
               >
@@ -349,7 +349,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <a
                 href="#projects"
                 className="group p-6 rounded-2xl transition-all duration-300 flex flex-col justify-center"
-                style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}
+                style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = 'rgba(168,255,120,0.35)')}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)')}
               >
@@ -364,7 +364,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <a
                 href={`#/project/${next.id}`}
                 className="group p-6 rounded-2xl transition-all duration-300 md:text-right"
-                style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}
+                style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = `${next.accent}35`)}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)')}
               >
@@ -382,7 +382,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <a
                 href="#projects"
                 className="group p-6 rounded-2xl transition-all duration-300 md:text-right flex flex-col justify-center"
-                style={{ background: '#0d1117', border: '1px solid rgba(255,255,255,0.07)' }}
+                style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = 'rgba(168,255,120,0.35)')}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)')}
               >
@@ -400,7 +400,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           <div
             className="rounded-3xl p-10 md:p-16 text-center"
             style={{
-              background: 'radial-gradient(ellipse 80% 80% at 50% 0%, rgba(168,255,120,0.06) 0%, transparent 70%), #0d1117',
+              background: 'radial-gradient(ellipse 80% 80% at 50% 0%, rgba(168,255,120,0.06) 0%, transparent 70%), #0a0a0c',
               border: '1px solid rgba(255,255,255,0.07)',
             }}
           >
@@ -414,7 +414,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold transition-all duration-300"
-                style={{ background: '#a8ff78', color: '#080a0f' }}
+                style={{ background: '#a8ff78', color: '#050505' }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
                   (e.currentTarget as HTMLElement).style.boxShadow = '0 14px 40px rgba(168,255,120,0.3)';
@@ -456,7 +456,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25 }}
           className="fixed inset-0 z-[100] flex items-center justify-center"
-          style={{ background: 'rgba(8,10,15,0.94)', backdropFilter: 'blur(10px)' }}
+          style={{ background: 'rgba(5,5,5,0.94)', backdropFilter: 'blur(10px)' }}
           onClick={() => setLightbox(null)}
         >
           <button
@@ -506,7 +506,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
 
           <div
             className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-mono"
-            style={{ background: 'rgba(8,10,15,0.7)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(240,240,240,0.6)' }}
+            style={{ background: 'rgba(5,5,5,0.7)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(240,240,240,0.6)' }}
           >
             {lightbox.index + 1} / {lightbox.list.length}
           </div>

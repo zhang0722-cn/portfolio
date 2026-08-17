@@ -61,9 +61,9 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay, ease: 'easeOut' }}
+      initial={{ opacity: 0, y: 28, filter: 'blur(8px)' }}
+      animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
+      transition={{ duration: 0.9, delay, ease: [0.32, 0.72, 0, 1] }}
     >
       {children}
     </motion.div>
@@ -83,19 +83,25 @@ function SkillCard({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: index * 0.08, ease: 'easeOut' }}
-      className="group relative p-8 rounded-2xl flex flex-col gap-5 transition-all duration-400 cursor-default"
-      style={{
-        background: '#0d1117',
-        border: '1px solid rgba(255,255,255,0.07)',
-      }}
-      whileHover={{
-        borderColor: `${group.color}30`,
-        backgroundColor: '#111520',
-      }}
+      initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
+      animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
+      transition={{ duration: 0.8, delay: index * 0.08, ease: [0.32, 0.72, 0, 1] }}
+      className="group"
+      whileHover={{ y: -6 }}
     >
+      {/* Double-Bezel 外圈层 */}
+      <div
+        className="p-1.5 rounded-[1.75rem]"
+        style={{
+          background: 'rgba(255,255,255,0.03)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.08)',
+        }}
+      >
+        <div
+          className="relative p-8 rounded-[1.5rem] flex flex-col gap-5 transition-colors duration-700 cursor-default overflow-hidden"
+          style={{ background: '#0a0a0c', boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.04)' }}
+        >
       {/* Icon */}
       <div
         className="w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold transition-all duration-300"
@@ -140,11 +146,13 @@ function SkillCard({
 
       {/* Hover glow */}
       <div
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        className="absolute inset-0 rounded-[1.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{
           background: `radial-gradient(ellipse 80% 60% at 50% 0%, ${group.color}06 0%, transparent 70%)`,
         }}
       />
+        </div>
+      </div>
     </motion.div>
   );
 }
@@ -172,7 +180,7 @@ export default function Skills() {
     <section
       id="skills"
       className="relative py-32"
-      style={{ background: '#080a0f' }}
+      style={{ background: '#050505' }}
     >
       {/* Decorative horizontal line */}
       <div
@@ -219,7 +227,7 @@ export default function Skills() {
           <div
             className="mt-16 p-8 rounded-2xl flex flex-wrap items-center justify-between gap-6"
             style={{
-              background: '#0d1117',
+              background: '#0a0a0c',
               border: '1px solid rgba(255,255,255,0.07)',
             }}
           >
@@ -360,7 +368,7 @@ export default function Skills() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25 }}
           className="fixed inset-0 z-[100] flex items-center justify-center"
-          style={{ background: 'rgba(8,10,15,0.94)', backdropFilter: 'blur(10px)' }}
+          style={{ background: 'rgba(5,5,5,0.94)', backdropFilter: 'blur(10px)' }}
           onClick={() => setCert(null)}
         >
           <button
@@ -410,7 +418,7 @@ export default function Skills() {
 
           <div
             className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-mono"
-            style={{ background: 'rgba(8,10,15,0.7)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(240,240,240,0.6)' }}
+            style={{ background: 'rgba(5,5,5,0.7)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(240,240,240,0.6)' }}
           >
             {cert + 1} / {certificates.length}
           </div>

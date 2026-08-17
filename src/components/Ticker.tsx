@@ -44,11 +44,11 @@ export default function Ticker() {
       {/* Fade masks */}
       <div
         className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to right, #080a0f, transparent)' }}
+        style={{ background: 'linear-gradient(to right, #050505, transparent)' }}
       />
       <div
         className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to left, #080a0f, transparent)' }}
+        style={{ background: 'linear-gradient(to left, #050505, transparent)' }}
       />
 
       <motion.div

@@ -75,7 +75,7 @@ export default function Hero() {
       className="relative flex items-center justify-start min-h-screen overflow-hidden"
       style={{
         background:
-          'radial-gradient(ellipse 100% 70% at 60% 10%, rgba(79,195,247,0.06) 0%, rgba(8,10,15,0) 65%), #080a0f',
+          'radial-gradient(ellipse 100% 70% at 60% 10%, rgba(79,195,247,0.06) 0%, rgba(5,5,5,0) 65%), #050505',
       }}
     >
       {/* Canvas */}
@@ -191,36 +191,47 @@ export default function Hero() {
             >
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300"
-                style={{ background: '#a8ff78', color: '#080a0f' }}
+                className="group inline-flex items-center gap-3 pl-7 pr-2 py-2 rounded-full text-sm font-semibold transition-all duration-500 active:scale-[0.98]"
+                style={{ background: '#a8ff78', color: '#050505' }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
-                  (e.currentTarget as HTMLElement).style.boxShadow = '0 14px 40px rgba(168,255,120,0.32)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = '0 16px 44px rgba(168,255,120,0.35)';
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
                   (e.currentTarget as HTMLElement).style.boxShadow = 'none';
                 }}
               >
                 查看我的作品
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <span
+                  className="w-9 h-9 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:translate-x-0.5 group-active:scale-95"
+                  style={{ background: 'rgba(5,5,5,0.12)', transitionTimingFunction: 'var(--ease-premium)' }}
+                >
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold transition-all duration-300"
-                style={{ border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(240,240,240,0.65)' }}
+                className="group inline-flex items-center gap-3 pl-7 pr-2 py-2 rounded-full text-sm font-semibold transition-all duration-500 active:scale-[0.98]"
+                style={{ border: '1px solid rgba(255,255,255,0.14)', color: 'rgba(240,240,240,0.7)' }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.28)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.32)';
                   (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,1)';
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.12)';
-                  (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.65)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.14)';
+                  (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.7)';
                 }}
               >
                 联系我
+                <span
+                  className="w-9 h-9 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:translate-x-0.5 group-active:scale-95"
+                  style={{ background: 'rgba(255,255,255,0.06)', transitionTimingFunction: 'var(--ease-premium)' }}
+                >
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
               </a>
             </motion.div>
           </div>

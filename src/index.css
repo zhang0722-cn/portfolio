@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #080a0f;
-  --bg-secondary: #0d1117;
-  --bg-card: #111520;
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0c;
+  --bg-card: #0e0e11;
   --accent: #a8ff78;
   --accent-blue: #4fc3f7;
   --text-primary: #f0f0f0;
   --text-secondary: #8a8f9e;
   --border: rgba(255, 255, 255, 0.07);
+  --ease-premium: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 * {
@@ -22,7 +23,7 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Space Grotesk', 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Space Grotesk', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -107,8 +108,8 @@ body {
 .video-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(8, 10, 15, 0.3) 0%,
-    rgba(8, 10, 15, 0.2) 50%,
-    rgba(8, 10, 15, 0.85) 100%
+    rgba(5, 5, 5, 0.3) 0%,
+    rgba(5, 5, 5, 0.2) 50%,
+    rgba(5, 5, 5, 0.85) 100%
   );
 }
