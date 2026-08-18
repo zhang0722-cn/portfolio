@@ -39,17 +39,17 @@ export default function Navbar() {
           <div
             className="flex items-center justify-between rounded-full pl-4 pr-2 py-2 transition-all duration-700"
             style={{
-              background: scrolled ? 'rgba(5,5,5,0.72)' : 'rgba(5,5,5,0.42)',
+              background: scrolled ? 'rgba(250,250,249,0.72)' : 'rgba(250,250,249,0.42)',
               backdropFilter: 'blur(24px)',
               WebkitBackdropFilter: 'blur(24px)',
-              border: '1px solid rgba(255,255,255,0.08)',
+              border: '1px solid rgba(0,0,0,0.08)',
               boxShadow: scrolled ? '0 16px 50px rgba(0,0,0,0.5)' : '0 8px 30px rgba(0,0,0,0.25)',
             }}
           >
             {/* Logo */}
             <a href="#hero" className="flex items-center gap-2.5 pl-2 group">
               <div className="w-8 h-8 rounded-[10px] animated-border p-[1.5px]">
-                <div className="w-full h-full rounded-[9px] flex items-center justify-center" style={{ background: '#050505' }}>
+                <div className="w-full h-full rounded-[9px] flex items-center justify-center" style={{ background: '#F2F2F0' }}>
                   <span className="text-[11px] font-bold text-white tracking-wide">ZH</span>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
                   {link.label}
                   <span
                     className="absolute left-0 -bottom-0.5 h-px w-full origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
-                    style={{ background: 'linear-gradient(90deg, #a8ff78, transparent)', transformOrigin: 'left' }}
+                    style={{ background: 'linear-gradient(90deg, #EA580C, transparent)', transformOrigin: 'left' }}
                   />
                 </a>
               ))}
@@ -80,8 +80,8 @@ export default function Navbar() {
               <a
                 href="mailto:zhang07221207@163.com"
                 className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-500 active:scale-[0.97]"
-                style={{ background: '#a8ff78', color: '#050505' }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.boxShadow = '0 8px 30px rgba(168,255,120,0.35)')}
+                style={{ background: '#EA580C', color: '#0d0d0d' }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.boxShadow = '0 8px 30px rgba(234,88,12,0.35)')}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.boxShadow = 'none')}
               >
                 求职中 · 欢迎联系
@@ -92,7 +92,7 @@ export default function Navbar() {
                 onClick={() => setOpen(!open)}
                 aria-label="菜单"
                 className="md:hidden relative w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-500"
-                style={{ border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.04)' }}
+                style={{ border: '1px solid rgba(0,0,0,0.12)', background: 'rgba(0,0,0,0.04)' }}
               >
                 <span className="relative block w-4 h-3.5">
                   <span
@@ -123,7 +123,7 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease }}
             className="fixed inset-0 z-40 md:hidden flex flex-col justify-center px-10"
-            style={{ background: 'rgba(5,5,5,0.92)', backdropFilter: 'blur(28px)', WebkitBackdropFilter: 'blur(28px)' }}
+            style={{ background: 'rgba(250,250,249,0.92)', backdropFilter: 'blur(28px)', WebkitBackdropFilter: 'blur(28px)' }}
             onClick={() => setOpen(false)}
           >
             <div className="space-y-2">
@@ -138,7 +138,7 @@ export default function Navbar() {
                   className="block text-[42px] font-bold text-white/90 py-2 leading-tight"
                   style={{ fontFamily: 'Space Grotesk, "Noto Sans SC", "PingFang SC", sans-serif' }}
                 >
-                  <span className="text-xs align-top mr-3 font-mono" style={{ color: '#a8ff78' }}>
+                  <span className="text-xs align-top mr-3 font-mono" style={{ color: '#EA580C' }}>
                     0{i + 1}
                   </span>
                   {link.label}
@@ -151,7 +151,7 @@ export default function Navbar() {
                 transition={{ duration: 0.65, delay: 0.08 * navLinks.length + 0.1, ease }}
                 onClick={() => setOpen(false)}
                 className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold transition-all duration-500 active:scale-[0.97]"
-                style={{ background: '#a8ff78', color: '#050505' }}
+                style={{ background: '#EA580C', color: '#0d0d0d' }}
               >
                 求职中 · 欢迎联系
               </motion.a>

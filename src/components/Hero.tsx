@@ -42,7 +42,7 @@ export default function Hero() {
         if (p.y > H) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(168,255,120,${p.alpha})`;
+        ctx.fillStyle = `rgba(234,88,12,${p.alpha})`;
         ctx.fill();
 
         for (let j = i + 1; j < particles.length; j++) {
@@ -54,7 +54,7 @@ export default function Hero() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = `rgba(168,255,120,${0.055 * (1 - dist / 140)})`;
+            ctx.strokeStyle = `rgba(234,88,12,${0.055 * (1 - dist / 140)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -75,7 +75,7 @@ export default function Hero() {
       className="relative flex items-center justify-start min-h-screen overflow-hidden"
       style={{
         background:
-          'radial-gradient(ellipse 100% 70% at 60% 10%, rgba(79,195,247,0.06) 0%, rgba(5,5,5,0) 65%), #050505',
+          'radial-gradient(ellipse 100% 70% at 60% 10%, rgba(79,195,247,0.06) 0%, rgba(250,250,249,0) 65%), #F2F2F0',
       }}
     >
       {/* Canvas */}
@@ -87,7 +87,7 @@ export default function Hero() {
         style={{
           fontSize: 'clamp(160px, 22vw, 380px)',
           color: 'transparent',
-          WebkitTextStroke: '1px rgba(255,255,255,0.03)',
+          WebkitTextStroke: '1px rgba(0,0,0,0.03)',
           fontFamily: 'Space Grotesk, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif',
           lineHeight: 0.85,
           userSelect: 'none',
@@ -112,7 +112,7 @@ export default function Hero() {
         style={{
           top: '70%', left: '15%', width: 400, height: 400,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(168,255,120,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(234,88,12,0.06) 0%, transparent 70%)',
           filter: 'blur(50px)',
           transform: 'translate(-50%,-50%)',
         }}
@@ -133,7 +133,7 @@ export default function Hero() {
               <span className="tag">✦ &nbsp;平面设计 · 品牌设计</span>
               <span
                 className="text-xs font-mono"
-                style={{ color: 'rgba(240,240,240,0.2)' }}
+                style={{ color: 'rgba(24,24,24,0.2)' }}
               >
                 江西九江
               </span>
@@ -152,7 +152,7 @@ export default function Hero() {
               >
                 张浩雷
               </h2>
-              <p className="mt-2 text-sm font-semibold tracking-wide" style={{ color: '#a8ff78' }}>
+              <p className="mt-2 text-sm font-semibold tracking-wide" style={{ color: '#EA580C' }}>
                 视觉传达设计 · 本科应届 · 平面 / 品牌设计方向
               </p>
             </motion.div>
@@ -172,7 +172,7 @@ export default function Hero() {
               <span
                 className="block"
                 style={{
-                  background: 'linear-gradient(90deg, #a8ff78 0%, #4fc3f7 55%, #a855f7 100%)',
+                  background: 'linear-gradient(90deg, #EA580C 0%, #EA580C 55%, #EA580C 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -192,9 +192,9 @@ export default function Hero() {
               <a
                 href="#projects"
                 className="group inline-flex items-center gap-3 pl-7 pr-2 py-2 rounded-full text-sm font-semibold transition-all duration-500 active:scale-[0.98]"
-                style={{ background: '#a8ff78', color: '#050505' }}
+                style={{ background: '#EA580C', color: '#0d0d0d' }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = '0 16px 44px rgba(168,255,120,0.35)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = '0 16px 44px rgba(234,88,12,0.35)';
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLElement).style.boxShadow = 'none';
@@ -203,7 +203,7 @@ export default function Hero() {
                 查看我的作品
                 <span
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:translate-x-0.5 group-active:scale-95"
-                  style={{ background: 'rgba(5,5,5,0.12)', transitionTimingFunction: 'var(--ease-premium)' }}
+                  style={{ background: 'rgba(250,250,249,0.12)', transitionTimingFunction: 'var(--ease-premium)' }}
                 >
                   <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -213,20 +213,20 @@ export default function Hero() {
               <a
                 href="#contact"
                 className="group inline-flex items-center gap-3 pl-7 pr-2 py-2 rounded-full text-sm font-semibold transition-all duration-500 active:scale-[0.98]"
-                style={{ border: '1px solid rgba(255,255,255,0.14)', color: 'rgba(240,240,240,0.7)' }}
+                style={{ border: '1px solid rgba(0,0,0,0.14)', color: 'rgba(24,24,24,0.7)' }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.32)';
-                  (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,1)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.32)';
+                  (e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,1)';
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.14)';
-                  (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.7)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.14)';
+                  (e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.7)';
                 }}
               >
                 联系我
                 <span
                   className="w-9 h-9 rounded-full flex items-center justify-center transition-transform duration-500 group-hover:translate-x-0.5 group-active:scale-95"
-                  style={{ background: 'rgba(255,255,255,0.06)', transitionTimingFunction: 'var(--ease-premium)' }}
+                  style={{ background: 'rgba(0,0,0,0.06)', transitionTimingFunction: 'var(--ease-premium)' }}
                 >
                   <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -246,7 +246,7 @@ export default function Hero() {
             {/* Description */}
             <p
               className="text-base leading-relaxed"
-              style={{ color: 'rgba(240,240,240,0.4)', fontFamily: 'Inter, sans-serif' }}
+              style={{ color: 'rgba(24,24,24,0.4)', fontFamily: 'Inter, sans-serif' }}
             >
               视觉传达设计专业本科应届毕业生，擅长品牌视觉识别系统（VI）构建与定制化字体设计，
               追求精准、克制、有文化内涵的设计表达。
@@ -255,7 +255,7 @@ export default function Hero() {
             {/* Stats */}
             <div
               className="grid grid-cols-2 gap-4 pt-6"
-              style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+              style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}
             >
               {[
                 { value: '30+', label: '文创延展' },
@@ -267,7 +267,7 @@ export default function Hero() {
                     className="text-2xl font-bold"
                     style={{
                       fontFamily: 'Space Grotesk',
-                      background: 'linear-gradient(90deg, #a8ff78, #4fc3f7)',
+                      background: 'linear-gradient(90deg, #EA580C, #EA580C)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
@@ -275,7 +275,7 @@ export default function Hero() {
                   >
                     {s.value}
                   </span>
-                  <span className="text-xs tracking-wider uppercase" style={{ color: 'rgba(240,240,240,0.3)' }}>
+                  <span className="text-xs tracking-wider uppercase" style={{ color: 'rgba(24,24,24,0.3)' }}>
                     {s.label}
                   </span>
                 </div>
@@ -286,12 +286,12 @@ export default function Hero() {
             <div
               className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl self-start"
               style={{
-                background: 'rgba(168,255,120,0.06)',
-                border: '1px solid rgba(168,255,120,0.18)',
+                background: 'rgba(234,88,12,0.06)',
+                border: '1px solid rgba(234,88,12,0.18)',
               }}
             >
-              <span className="w-2 h-2 rounded-full bg-[#a8ff78] animate-pulse" />
-              <span className="text-xs font-medium" style={{ color: '#a8ff78' }}>
+              <span className="w-2 h-2 rounded-full bg-[#EA580C] animate-pulse" />
+              <span className="text-xs font-medium" style={{ color: '#EA580C' }}>
                 求职中 · 一周内到岗
               </span>
             </div>
@@ -306,12 +306,12 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 1 }}
       >
-        <span className="text-[10px] tracking-[0.2em] uppercase" style={{ color: 'rgba(255,255,255,0.18)' }}>
+        <span className="text-[10px] tracking-[0.2em] uppercase" style={{ color: 'rgba(0,0,0,0.18)' }}>
           向下滚动
         </span>
         <motion.div
           className="w-px h-10 origin-top"
-          style={{ background: 'linear-gradient(to bottom, rgba(168,255,120,0.5), transparent)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(234,88,12,0.5), transparent)' }}
           animate={{ scaleY: [1, 0.3, 1] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
         />

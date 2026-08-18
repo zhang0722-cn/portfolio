@@ -1,15 +1,25 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'StretchPro';
+  src: url('fonts/StretchPro.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+
 :root {
-  --bg-primary: #050505;
-  --bg-secondary: #0a0a0c;
-  --bg-card: #0e0e11;
-  --accent: #a8ff78;
-  --accent-blue: #4fc3f7;
-  --text-primary: #f0f0f0;
-  --text-secondary: #8a8f9e;
-  --border: rgba(255, 255, 255, 0.07);
+  --bg-primary: #F2F2F0;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #F6F6F4;
+  --accent: #EA580C;
+  --accent-blue: #EA580C;
+  --text-primary: #161616;
+  --text-secondary: #6B7280;
+  --border: rgba(0, 0, 0, 0.08);
   --ease-premium: cubic-bezier(0.32, 0.72, 0, 1);
+  --color-white: #161616; /* 浅色主题：text-white 等工具类变深色文字 */
 }
 
 * {
@@ -36,7 +46,7 @@ body {
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2f3e;
+  background: #c9c9c6;
   border-radius: 2px;
 }
 
@@ -48,7 +58,7 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.3;
+  opacity: 0.16;
 }
 
 /* Glow effects */
@@ -71,7 +81,7 @@ body {
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
-  color: #8a8f9e;
+  color: #6B7280;
 }
 
 /* Horizontal scroll for project cards on smaller viewports */
@@ -91,7 +101,7 @@ body {
 }
 
 .animated-border {
-  background: linear-gradient(270deg, #a8ff78, #4fc3f7, #a855f7, #a8ff78);
+  background: linear-gradient(270deg, #EA580C, #EA580C, #EA580C, #EA580C);
   background-size: 300% 300%;
   animation: border-rotate 6s ease infinite;
 }

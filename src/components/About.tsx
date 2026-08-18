@@ -2,9 +2,9 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const stats = [
-  { value: '30+', label: '文创设计延展', desc: '3大系列海报与30个品类周边', color: '#4fc3f7' },
-  { value: '20款', label: '成功量产', desc: '对接15家厂家实现落地', color: '#a855f7' },
-  { value: '80%', label: '产品售出率', desc: '市场销售验证良好', color: '#f472b6' },
+  { value: '30+', label: '文创设计延展', desc: '3大系列海报与30个品类周边', color: '#EA580C' },
+  { value: '20款', label: '成功量产', desc: '对接15家厂家实现落地', color: '#EA580C' },
+  { value: '80%', label: '产品售出率', desc: '市场销售验证良好', color: '#EA580C' },
 ];
 
 const experience = [
@@ -13,28 +13,28 @@ const experience = [
     role: '视觉传达设计 · 本科',
     company: '长春科技学院',
     desc: '视觉传达设计专业本科，主修平面设计、品牌策划、字体与版式等方向。',
-    color: '#a855f7',
+    color: '#EA580C',
   },
   {
     period: '2024',
     role: '「速写班长」线上速写训练',
     company: '线上密集训练 · 每日打卡',
     desc: '参加为期一个月的线上密集训练，完成每日速写打卡，提升造型能力与手绘表现力。',
-    color: '#fb923c',
+    color: '#EA580C',
   },
   {
     period: '2025.06 — 2025.11',
     role: '毕业设计展视觉统筹与执行',
     company: '龙虎山文旅品牌项目',
     desc: '制定《毕业设计手册排版规范》，核对28余份毕业设计材料，规划展区动线与视觉导视系统，对接3家印刷供应商实现零差错落地。',
-    color: '#4fc3f7',
+    color: '#EA580C',
   },
   {
     period: '2026.04 — 2026.05',
     role: '设计实习生',
     company: '杭州聿书堂文化艺术有限公司',
     desc: '参与「禅黑体」字体设计与「三桥菜市场」品牌视觉重建项目，使用 Glyphs 完成字模曲线调整与字距优化，输出灯牌效果图及制作文件。',
-    color: '#a8ff78',
+    color: '#EA580C',
   },
 ];
 
@@ -58,14 +58,14 @@ export default function About() {
     <section
       id="about"
       className="relative py-32"
-      style={{ background: '#050505' }}
+      style={{ background: '#F2F2F0' }}
     >
       {/* Subtle grid */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)',
+            'linear-gradient(rgba(0,0,0,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.018) 1px, transparent 1px)',
           backgroundSize: '80px 80px',
         }}
       />
@@ -75,7 +75,7 @@ export default function About() {
         <FadeIn>
           <div className="flex items-center gap-4 mb-16">
             <span className="tag">关于我</span>
-            <div className="flex-1 h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
+            <div className="flex-1 h-px" style={{ background: 'rgba(0,0,0,0.06)' }} />
           </div>
         </FadeIn>
 
@@ -89,17 +89,17 @@ export default function About() {
               <div
                 className="p-1.5 rounded-[1.75rem]"
                 style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.08)',
+                  background: 'rgba(0,0,0,0.03)',
+                  border: '1px solid rgba(0,0,0,0.08)',
+                  boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.08)',
                 }}
               >
                 <div
                   className="relative w-full rounded-[1.6rem] overflow-hidden"
                   style={{
                     aspectRatio: '3/4',
-                    background: '#0a0a0c',
-                    boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.04)',
+                    background: '#FFFFFF',
+                    boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.04)',
                   }}
                 >
                 <img
@@ -112,7 +112,7 @@ export default function About() {
                   className="absolute inset-0"
                   style={{
                     background:
-                      'linear-gradient(to top, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.05) 55%, transparent 100%)',
+                      'linear-gradient(to top, rgba(250,250,249,0.88) 0%, rgba(250,250,249,0.05) 55%, transparent 100%)',
                   }}
                 />
                 {/* Name badge */}
@@ -120,7 +120,7 @@ export default function About() {
                   <p className="text-white font-bold text-xl" style={{ fontFamily: 'Space Grotesk' }}>
                     张浩雷
                   </p>
-                  <p className="text-xs tracking-wider uppercase mt-1" style={{ color: '#a8ff78' }}>
+                  <p className="text-xs tracking-wider uppercase mt-1" style={{ color: '#EA580C' }}>
                     平面设计 · 品牌设计 实习生
                   </p>
                 </div>
@@ -128,9 +128,9 @@ export default function About() {
                 <div
                   className="absolute top-4 right-4 text-xs px-3 py-1 rounded-full font-mono"
                   style={{
-                    background: 'rgba(5,5,5,0.7)',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    color: 'rgba(255,255,255,0.5)',
+                    background: 'rgba(250,250,249,0.7)',
+                    border: '1px solid rgba(0,0,0,0.1)',
+                    color: 'rgba(0,0,0,0.5)',
                     backdropFilter: 'blur(8px)',
                   }}
                 >
@@ -143,11 +143,11 @@ export default function About() {
               <div
                 className="rounded-xl p-5"
                 style={{
-                  background: '#0a0a0c',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: '#FFFFFF',
+                  border: '1px solid rgba(0,0,0,0.07)',
                 }}
               >
-                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#8a8f9e' }}>
+                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#6B7280' }}>
                   联系方式
                 </p>
                 <div className="space-y-1">
@@ -161,13 +161,13 @@ export default function About() {
                       key={item.text}
                       href={item.href}
                       className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200"
-                      style={{ color: 'rgba(240,240,240,0.45)' }}
+                      style={{ color: 'rgba(24,24,24,0.45)' }}
                       onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,1)';
-                        (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.04)';
+                        (e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,1)';
+                        (e.currentTarget as HTMLElement).style.background = 'rgba(0,0,0,0.04)';
                       }}
                       onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.45)';
+                        (e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.45)';
                         (e.currentTarget as HTMLElement).style.background = 'transparent';
                       }}
                     >
@@ -179,8 +179,8 @@ export default function About() {
               </div>
 
               {/* 荣誉证书 */}
-              <div className="rounded-xl p-5" style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}>
-                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#8a8f9e' }}>
+              <div className="rounded-xl p-5" style={{ background: '#FFFFFF', border: '1px solid rgba(0,0,0,0.07)' }}>
+                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#6B7280' }}>
                   荣誉证书
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -189,22 +189,22 @@ export default function About() {
               </div>
 
               {/* 其他信息 */}
-              <div className="rounded-xl p-5" style={{ background: '#0a0a0c', border: '1px solid rgba(255,255,255,0.07)' }}>
-                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#8a8f9e' }}>
+              <div className="rounded-xl p-5" style={{ background: '#FFFFFF', border: '1px solid rgba(0,0,0,0.07)' }}>
+                <p className="text-xs uppercase tracking-widest mb-4" style={{ color: '#6B7280' }}>
                   其他信息
                 </p>
-                <div className="space-y-2.5 text-sm" style={{ color: 'rgba(240,240,240,0.55)' }}>
+                <div className="space-y-2.5 text-sm" style={{ color: 'rgba(24,24,24,0.55)' }}>
                   <div className="flex items-center justify-between">
-                    <span style={{ color: 'rgba(240,240,240,0.35)' }}>出生日期</span>
-                    <span className="font-medium" style={{ color: 'rgba(240,240,240,0.75)' }}>2004.07</span>
+                    <span style={{ color: 'rgba(24,24,24,0.35)' }}>出生日期</span>
+                    <span className="font-medium" style={{ color: 'rgba(24,24,24,0.75)' }}>2004.07</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span style={{ color: 'rgba(240,240,240,0.35)' }}>兴趣爱好</span>
-                    <span className="font-medium" style={{ color: 'rgba(240,240,240,0.75)' }}>国际象棋 · 羽毛球</span>
+                    <span style={{ color: 'rgba(24,24,24,0.35)' }}>兴趣爱好</span>
+                    <span className="font-medium" style={{ color: 'rgba(24,24,24,0.75)' }}>国际象棋 · 羽毛球</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span style={{ color: 'rgba(240,240,240,0.35)' }}>到岗时间</span>
-                    <span className="font-medium" style={{ color: 'rgba(240,240,240,0.75)' }}>一周以内</span>
+                    <span style={{ color: 'rgba(24,24,24,0.35)' }}>到岗时间</span>
+                    <span className="font-medium" style={{ color: 'rgba(24,24,24,0.75)' }}>一周以内</span>
                   </div>
                 </div>
               </div>
@@ -217,24 +217,18 @@ export default function About() {
             <FadeIn delay={0.14}>
               <div>
                 <h2
-                  className="text-4xl xl:text-5xl font-bold leading-tight mb-8"
-                  style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+                  className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-8"
+                  style={{ fontFamily: 'Space Grotesk, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif' }}
                 >
-                  <span className="text-white">设计师、创作者，</span>
-                  <br />
-                  <span style={{ color: 'rgba(240,240,240,0.3)' }}>也是品牌的</span>
-                  <span
-                    style={{
-                      background: 'linear-gradient(90deg, #a8ff78, #4fc3f7)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                    }}
-                  >
-                    策略思考者。
-                  </span>
+                  自我介绍
                 </h2>
-                <div className="space-y-4 text-[15px] leading-relaxed" style={{ color: 'rgba(240,240,240,0.48)' }}>
+                <p
+                  className="mb-8 mt-3 uppercase"
+                  style={{ fontFamily: 'StretchPro, sans-serif', color: '#EA580C', fontSize: 14, letterSpacing: '0.01em' }}
+                >
+                  SELF INTRODUCTION
+                </p>
+                <div className="space-y-4 text-[15px] leading-relaxed" style={{ color: 'rgba(24,24,24,0.48)' }}>
                   <p>
                     我是长春科技学院视觉传达设计专业本科应届毕业生，具备扎实的设计理论基础与良好的审美素养。
                   </p>
@@ -258,14 +252,14 @@ export default function About() {
                     key={s.label}
                     className="relative p-5 rounded-xl overflow-hidden group transition-all duration-300"
                     style={{
-                      background: '#0a0a0c',
-                      border: '1px solid rgba(255,255,255,0.07)',
+                      background: '#FFFFFF',
+                      border: '1px solid rgba(0,0,0,0.07)',
                     }}
                     onMouseEnter={(e) => {
                       (e.currentTarget as HTMLElement).style.borderColor = `${s.color}30`;
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)';
+                      (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.07)';
                     }}
                   >
                     <div
@@ -278,7 +272,7 @@ export default function About() {
                       {s.value}
                     </div>
                     <div className="text-xs font-semibold text-white mb-1">{s.label}</div>
-                    <div className="text-xs" style={{ color: 'rgba(240,240,240,0.3)' }}>
+                    <div className="text-xs" style={{ color: 'rgba(24,24,24,0.3)' }}>
                       {s.desc}
                     </div>
                     {/* Bottom accent */}
@@ -294,7 +288,7 @@ export default function About() {
             {/* Experience timeline */}
             <FadeIn delay={0.28}>
               <div>
-                <p className="text-xs uppercase tracking-widest mb-8" style={{ color: '#8a8f9e' }}>
+                <p className="text-xs uppercase tracking-widest mb-8" style={{ color: '#6B7280' }}>
                   教育背景与经历
                 </p>
                 <div className="space-y-0">
@@ -303,7 +297,7 @@ export default function About() {
                       {i < experience.length - 1 && (
                         <div
                           className="absolute left-[4px] top-5 bottom-0 w-px"
-                          style={{ background: 'rgba(255,255,255,0.06)' }}
+                          style={{ background: 'rgba(0,0,0,0.06)' }}
                         />
                       )}
                       {/* Dot */}
@@ -312,7 +306,7 @@ export default function About() {
                           className="w-2.5 h-2.5 rounded-full border-2 transition-all duration-300"
                           style={{
                             borderColor: exp.color,
-                            background: '#050505',
+                            background: '#F2F2F0',
                           }}
                         />
                       </div>
@@ -328,15 +322,15 @@ export default function About() {
                           <span
                             className="text-xs font-mono px-2.5 py-1 rounded-md flex-shrink-0"
                             style={{
-                              background: 'rgba(255,255,255,0.04)',
-                              border: '1px solid rgba(255,255,255,0.07)',
-                              color: 'rgba(240,240,240,0.35)',
+                              background: 'rgba(0,0,0,0.04)',
+                              border: '1px solid rgba(0,0,0,0.07)',
+                              color: 'rgba(24,24,24,0.35)',
                             }}
                           >
                             {exp.period}
                           </span>
                         </div>
-                        <p className="text-sm leading-relaxed" style={{ color: 'rgba(240,240,240,0.42)' }}>
+                        <p className="text-sm leading-relaxed" style={{ color: 'rgba(24,24,24,0.42)' }}>
                           {exp.desc}
                         </p>
                       </div>
@@ -349,7 +343,7 @@ export default function About() {
             {/* 主修课程 */}
             <FadeIn delay={0.34}>
               <div>
-                <p className="text-xs uppercase tracking-widest mb-6" style={{ color: '#8a8f9e' }}>
+                <p className="text-xs uppercase tracking-widest mb-6" style={{ color: '#6B7280' }}>
                   主修课程
                 </p>
                 <div className="flex flex-wrap gap-2">

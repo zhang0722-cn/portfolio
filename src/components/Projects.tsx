@@ -41,16 +41,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <div
         className="p-1.5 rounded-[1.75rem] transition-all duration-700"
         style={{
-          background: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.35)',
+          background: 'rgba(0,0,0,0.03)',
+          border: '1px solid rgba(0,0,0,0.08)',
+          boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.08), 0 20px 60px rgba(0,0,0,0.35)',
           transitionTimingFunction: 'var(--ease-premium)',
         }}
       >
         {/* 内核心 */}
         <div
           className="relative rounded-[1.5rem] overflow-hidden"
-          style={{ background: '#0a0a0c', boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.04)' }}
+          style={{ background: '#FFFFFF', boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.04)' }}
         >
           {/* Image */}
           <div
@@ -72,9 +72,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <div
               className="absolute top-4 right-4 text-xs font-mono px-3 py-1 rounded-full"
               style={{
-                background: 'rgba(5,5,5,0.7)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                color: 'rgba(240,240,240,0.6)',
+                background: 'rgba(250,250,249,0.7)',
+                border: '1px solid rgba(0,0,0,0.1)',
+                color: 'rgba(24,24,24,0.6)',
                 backdropFilter: 'blur(8px)',
                 WebkitBackdropFilter: 'blur(8px)',
               }}
@@ -85,7 +85,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <div
               className="absolute top-4 left-4 text-xs font-semibold px-3 py-1 rounded-full"
               style={{
-                background: 'rgba(5,5,5,0.7)',
+                background: 'rgba(250,250,249,0.7)',
                 border: `1px solid ${project.accent}40`,
                 color: project.accent,
                 backdropFilter: 'blur(8px)',
@@ -106,7 +106,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             </h3>
             <p
               className="text-sm leading-relaxed mb-4 line-clamp-3"
-              style={{ color: 'rgba(240,240,240,0.45)' }}
+              style={{ color: 'rgba(24,24,24,0.45)' }}
             >
               {project.desc}
             </p>
@@ -155,7 +155,7 @@ export default function Projects() {
       className="relative py-28 md:py-36"
       style={{
         background:
-          'radial-gradient(ellipse 70% 50% at 50% 100%, rgba(168,255,120,0.05) 0%, transparent 70%), #050505',
+          'radial-gradient(ellipse 70% 50% at 50% 100%, rgba(234,88,12,0.05) 0%, transparent 70%), #F2F2F0',
       }}
     >
       <div className="max-w-[1700px] mx-auto px-6 md:px-8">
@@ -165,7 +165,7 @@ export default function Projects() {
             <div>
               <div className="flex items-center gap-4 mb-5">
                 <span className="tag">精选作品</span>
-                <div className="flex-1 h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
+                <div className="flex-1 h-px" style={{ background: 'rgba(0,0,0,0.06)' }} />
               </div>
               <h2
                 className="text-5xl lg:text-6xl font-bold text-white leading-tight"
@@ -173,16 +173,22 @@ export default function Projects() {
               >
                 精选项目
               </h2>
+              <p
+                className="mt-3 uppercase"
+                style={{ fontFamily: 'StretchPro, sans-serif', color: '#EA580C', fontSize: 13, letterSpacing: '0.01em' }}
+              >
+                SELECTED PROJECTS
+              </p>
             </div>
             <a
               href="#contact"
               className="hidden lg:inline-flex items-center gap-2 text-sm transition-colors duration-500"
-              style={{ color: 'rgba(240,240,240,0.4)' }}
+              style={{ color: 'rgba(24,24,24,0.4)' }}
               onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.9)')
+                ((e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.9)')
               }
               onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.4)')
+                ((e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.4)')
               }
             >
               查看全部项目

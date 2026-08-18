@@ -101,7 +101,7 @@ export default function Contact() {
       className="relative min-h-screen flex flex-col justify-between overflow-hidden"
       style={{
         background:
-          'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(168,255,120,0.06) 0%, rgba(5,5,5,0) 70%), #050505',
+          'radial-gradient(ellipse 80% 60% at 50% 30%, rgba(234,88,12,0.06) 0%, rgba(250,250,249,0) 70%), #F2F2F0',
       }}
     >
       {/* Top border glow */}
@@ -109,7 +109,7 @@ export default function Contact() {
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            'linear-gradient(90deg, transparent 0%, rgba(168,255,120,0.3) 40%, rgba(79,195,247,0.3) 60%, transparent 100%)',
+            'linear-gradient(90deg, transparent 0%, rgba(234,88,12,0.3) 40%, rgba(79,195,247,0.3) 60%, transparent 100%)',
         }}
       />
 
@@ -118,7 +118,7 @@ export default function Contact() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)',
+            'linear-gradient(rgba(0,0,0,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.015) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
@@ -133,7 +133,7 @@ export default function Contact() {
           width: 800,
           height: 800,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(168,255,120,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(234,88,12,0.05) 0%, transparent 70%)',
           filter: 'blur(60px)',
         }}
       />
@@ -158,7 +158,7 @@ export default function Contact() {
           >
             <span
               style={{
-                background: 'linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.4) 100%)',
+                background: 'linear-gradient(135deg, #ffffff 0%, rgba(0,0,0,0.4) 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -169,7 +169,7 @@ export default function Contact() {
             <br />
             <span
               style={{
-                background: 'linear-gradient(90deg, #a8ff78 0%, #4fc3f7 100%)',
+                background: 'linear-gradient(90deg, #EA580C 0%, #EA580C 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -184,7 +184,7 @@ export default function Contact() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.2, ease: 'easeOut' }}
             className="text-lg max-w-lg mx-auto mb-3 leading-relaxed"
-            style={{ color: 'rgba(240,240,240,0.4)' }}
+            style={{ color: 'rgba(24,24,24,0.4)' }}
           >
             目前正在寻找平面设计 / 品牌设计方向的实习机会，
             <br />
@@ -196,7 +196,7 @@ export default function Contact() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.28, ease: 'easeOut' }}
             className="text-xs max-w-lg mx-auto mb-12 leading-relaxed"
-            style={{ color: 'rgba(240,240,240,0.3)' }}
+            style={{ color: 'rgba(24,24,24,0.3)' }}
           >
             作品集整理中，面试时可携带源文件或现场展示。
           </motion.p>
@@ -211,18 +211,18 @@ export default function Contact() {
             <a
               href="https://mail.163.com/" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-semibold transition-all duration-300"
-              style={{ background: '#a8ff78', color: '#050505' }}
+              style={{ background: '#EA580C', color: '#0d0d0d' }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.transform = 'translateY(-3px)';
                 (e.currentTarget as HTMLElement).style.boxShadow =
-                  '0 16px 50px rgba(168,255,120,0.35)';
+                  '0 16px 50px rgba(234,88,12,0.35)';
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
                 (e.currentTarget as HTMLElement).style.boxShadow = 'none';
               }}
             >
-              <span className="w-2 h-2 rounded-full bg-[#050505] opacity-40 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#F2F2F0] opacity-40 animate-pulse" />
               发邮件联系我
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path
@@ -238,16 +238,16 @@ export default function Contact() {
               href="tel:16643075859"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold transition-all duration-300"
               style={{
-                border: '1px solid rgba(255,255,255,0.12)',
-                color: 'rgba(240,240,240,0.65)',
+                border: '1px solid rgba(0,0,0,0.12)',
+                color: 'rgba(24,24,24,0.65)',
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.3)';
-                (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,1)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.3)';
+                (e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,1)';
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.12)';
-                (e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.65)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.12)';
+                (e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.65)';
               }}
             >
               电话联系
@@ -256,13 +256,13 @@ export default function Contact() {
               href="resume-zhanghaolei.pdf"
               download="张浩雷的简历.pdf"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-sm font-semibold transition-all duration-300"
-              style={{ border: '1px solid rgba(168,255,120,0.25)', color: '#a8ff78' }}
+              style={{ border: '1px solid rgba(234,88,12,0.25)', color: '#EA580C' }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(168,255,120,0.6)';
-                (e.currentTarget as HTMLElement).style.background = 'rgba(168,255,120,0.08)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(234,88,12,0.6)';
+                (e.currentTarget as HTMLElement).style.background = 'rgba(234,88,12,0.08)';
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(168,255,120,0.25)';
+                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(234,88,12,0.25)';
                 (e.currentTarget as HTMLElement).style.background = 'transparent';
               }}
             >
@@ -286,34 +286,34 @@ export default function Contact() {
                 href={c.href}
                 className="group flex flex-col items-center gap-3 p-5 rounded-xl transition-all duration-300"
                 style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.07)',
+                  background: 'rgba(0,0,0,0.03)',
+                  border: '1px solid rgba(0,0,0,0.07)',
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(168,255,120,0.25)';
-                  (e.currentTarget as HTMLElement).style.background = 'rgba(168,255,120,0.05)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(234,88,12,0.25)';
+                  (e.currentTarget as HTMLElement).style.background = 'rgba(234,88,12,0.05)';
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.07)';
-                  (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)';
+                  (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,0,0,0.07)';
+                  (e.currentTarget as HTMLElement).style.background = 'rgba(0,0,0,0.03)';
                 }}
               >
                 <div
                   className="transition-colors duration-300"
-                  style={{ color: 'rgba(240,240,240,0.4)' }}
+                  style={{ color: 'rgba(24,24,24,0.4)' }}
                 >
                   {c.icon}
                 </div>
                 <div className="text-center">
                   <p
                     className="text-xs uppercase tracking-wider mb-1"
-                    style={{ color: 'rgba(240,240,240,0.3)' }}
+                    style={{ color: 'rgba(24,24,24,0.3)' }}
                   >
                     {c.label}
                   </p>
                   <p
                     className="text-xs font-medium"
-                    style={{ color: 'rgba(240,240,240,0.6)' }}
+                    style={{ color: 'rgba(24,24,24,0.6)' }}
                   >
                     {c.value}
                   </p>
@@ -327,10 +327,10 @@ export default function Contact() {
       {/* Footer bar */}
       <div
         className="relative z-10 border-t"
-        style={{ borderColor: 'rgba(255,255,255,0.06)' }}
+        style={{ borderColor: 'rgba(0,0,0,0.06)' }}
       >
         <div className="max-w-[1700px] mx-auto px-8 py-6 flex items-center justify-between">
-          <p className="text-xs" style={{ color: 'rgba(240,240,240,0.2)' }}>
+          <p className="text-xs" style={{ color: 'rgba(24,24,24,0.2)' }}>
             © 2026 张浩雷 · 保留所有权利
           </p>
           <div className="flex items-center gap-6">
@@ -343,19 +343,19 @@ export default function Contact() {
                 onClick={() => copyText(s.value, s.key)}
                 title={s.tip}
                 className="text-xs transition-colors duration-200 cursor-pointer"
-                style={{ color: 'rgba(240,240,240,0.2)' }}
+                style={{ color: 'rgba(24,24,24,0.2)' }}
                 onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.7)')
+                  ((e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.7)')
                 }
                 onMouseLeave={(e) =>
-                  ((e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.2)')
+                  ((e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.2)')
                 }
               >
                 {copied === s.key ? '✓ 已复制' : s.name}
               </button>
             ))}
           </div>
-          <p className="text-xs" style={{ color: 'rgba(240,240,240,0.2)' }}>
+          <p className="text-xs" style={{ color: 'rgba(24,24,24,0.2)' }}>
             用心设计与构建 ♥
           </p>
         </div>

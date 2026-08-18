@@ -6,42 +6,42 @@ const skillGroups = [
   {
     icon: '◈',
     title: '视觉设计',
-    color: '#a8ff78',
+    color: '#EA580C',
     desc: '以精准的审美和克制的表达，完成海报、宣传物料与版式设计——从排版到色彩，每个细节都在叙事。',
     skills: ['Photoshop', 'Illustrator', '海报设计', '版式设计', '色彩校正'],
   },
   {
     icon: '⬡',
     title: '品牌识别',
-    color: '#4fc3f7',
+    color: '#EA580C',
     desc: '从Logo、标准色、辅助图形到品牌规范，构建统一且富有文化内涵的品牌识别系统（VI），并推动物料落地。',
     skills: ['VI 系统', '标志设计', '导视系统', '品牌规范', '触点延展'],
   },
   {
     icon: '◎',
     title: '字体设计',
-    color: '#a855f7',
+    color: '#EA580C',
     desc: '参与原创中文字体设计开发，熟练使用 Glyphs 完成字形手稿绘制、数字化转译与字距优化，兼顾气质调性与阅读舒适度。',
     skills: ['Glyphs', '字形绘制', '字距优化', '中文字体', '字体设计'],
   },
   {
     icon: '⬟',
     title: '版式与印刷',
-    color: '#f472b6',
+    color: '#EA580C',
     desc: '画册排版、书籍装帧与印刷工艺管控，从版式规范到色彩管理（CMYK），确保设计在实物层面的准确还原。',
     skills: ['InDesign', '书籍装帧', '印刷工艺', 'CMYK 色彩管理', '画册编辑'],
   },
   {
     icon: '◐',
     title: 'AI 辅助设计',
-    color: '#fb923c',
+    color: '#EA580C',
     desc: '将 AI + PS 工作流整合进设计提案与落地环节，快速输出灯牌效果图与制作文件，提升效率与还原度。',
     skills: ['AI + PS', '效果图输出', '快速提案', '风格控制'],
   },
   {
     icon: '◻',
     title: '项目与协作',
-    color: '#34d399',
+    color: '#EA580C',
     desc: '善于在复杂任务中建立规范、推动协作，具备供应商对接、价格谈判与项目统筹意识，保障设计项目高质量落地。',
     skills: ['供应商对接', '多方协作', '规范制定', '商务谈判', '方案汇报'],
   },
@@ -93,14 +93,14 @@ function SkillCard({
       <div
         className="p-1.5 rounded-[1.75rem]"
         style={{
-          background: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.08)',
+          background: 'rgba(0,0,0,0.03)',
+          border: '1px solid rgba(0,0,0,0.08)',
+          boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.08)',
         }}
       >
         <div
           className="relative p-8 rounded-[1.5rem] flex flex-col gap-5 transition-colors duration-700 cursor-default overflow-hidden"
-          style={{ background: '#0a0a0c', boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.04)' }}
+          style={{ background: '#FFFFFF', boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.04)' }}
         >
       {/* Icon */}
       <div
@@ -122,7 +122,7 @@ function SkillCard({
         >
           {group.title}
         </h3>
-        <p className="text-sm leading-relaxed" style={{ color: 'rgba(240,240,240,0.45)' }}>
+        <p className="text-sm leading-relaxed" style={{ color: 'rgba(24,24,24,0.45)' }}>
           {group.desc}
         </p>
       </div>
@@ -180,12 +180,12 @@ export default function Skills() {
     <section
       id="skills"
       className="relative py-32"
-      style={{ background: '#050505' }}
+      style={{ background: '#F2F2F0' }}
     >
       {/* Decorative horizontal line */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(168,255,120,0.2), transparent)' }}
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(234,88,12,0.2), transparent)' }}
       />
 
       <div className="max-w-[1700px] mx-auto px-8">
@@ -194,18 +194,26 @@ export default function Skills() {
           <div className="mb-16">
             <div className="flex items-center gap-4 mb-4">
               <span className="tag">核心能力</span>
-              <div className="flex-1 h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
+              <div className="flex-1 h-px" style={{ background: 'rgba(0,0,0,0.06)' }} />
             </div>
             <div className="flex items-end justify-between">
-              <h2
+              <div>
+                <h2
                 className="text-5xl lg:text-6xl font-bold text-white leading-tight"
                 style={{ fontFamily: 'Space Grotesk, sans-serif' }}
               >
                 个人优势
               </h2>
               <p
+                className="mt-3 uppercase"
+                style={{ fontFamily: 'StretchPro, sans-serif', color: '#EA580C', fontSize: 12, letterSpacing: '0.01em' }}
+              >
+                PERSONAL STRENGTHS
+                </p>
+              </div>
+              <p
                 className="hidden lg:block max-w-sm text-sm leading-relaxed text-right"
-                style={{ color: 'rgba(240,240,240,0.35)' }}
+                style={{ color: 'rgba(24,24,24,0.35)' }}
               >
                 横跨视觉、品牌、AI设计的复合型能力，
                 <br />
@@ -227,11 +235,11 @@ export default function Skills() {
           <div
             className="mt-16 p-8 rounded-2xl flex flex-wrap items-center justify-between gap-6"
             style={{
-              background: '#0a0a0c',
-              border: '1px solid rgba(255,255,255,0.07)',
+              background: '#FFFFFF',
+              border: '1px solid rgba(0,0,0,0.07)',
             }}
           >
-            <p className="text-xs uppercase tracking-widest" style={{ color: '#8a8f9e' }}>
+            <p className="text-xs uppercase tracking-widest" style={{ color: '#6B7280' }}>
               常用设计工具
             </p>
             <div className="flex flex-wrap gap-6 items-center">
@@ -260,7 +268,7 @@ export default function Skills() {
                   icon: (
                     <span
                       className="inline-flex items-center justify-center rounded-[5px] font-bold flex-shrink-0"
-                      style={{ width: 18, height: 18, background: '#FF3366', color: '#ffffff', fontSize: 8.5, letterSpacing: '-0.5px' }}
+                      style={{ width: 18, height: 18, background: '#FF3366', color: '#141414', fontSize: 8.5, letterSpacing: '-0.5px' }}
                     >
                       Id
                     </span>
@@ -272,7 +280,7 @@ export default function Skills() {
                   icon: (
                     <span
                       className="inline-flex items-center justify-center rounded-[5px] font-bold flex-shrink-0"
-                      style={{ width: 18, height: 18, background: '#1e293b', border: '1px solid rgba(255,255,255,0.25)', color: '#e2e8f0', fontSize: 11 }}
+                      style={{ width: 18, height: 18, background: '#1e293b', border: '1px solid rgba(0,0,0,0.25)', color: '#e2e8f0', fontSize: 11 }}
                     >
                       G
                     </span>
@@ -294,18 +302,18 @@ export default function Skills() {
                 {
                   name: 'AI 工具',
                   level: '辅助',
-                  icon: <Sparkles size={16} style={{ color: '#a8ff78' }} strokeWidth={2} />,
+                  icon: <Sparkles size={16} style={{ color: '#EA580C' }} strokeWidth={2} />,
                 },
               ].map((tool) => (
                 <span
                   key={tool.name}
                   className="flex items-center gap-2 text-sm font-medium transition-colors duration-200"
-                  style={{ color: 'rgba(240,240,240,0.3)' }}
+                  style={{ color: 'rgba(24,24,24,0.3)' }}
                   onMouseEnter={(e) =>
-                    ((e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.9)')
+                    ((e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.9)')
                   }
                   onMouseLeave={(e) =>
-                    ((e.currentTarget as HTMLElement).style.color = 'rgba(240,240,240,0.3)')
+                    ((e.currentTarget as HTMLElement).style.color = 'rgba(24,24,24,0.3)')
                   }
                 >
                   {tool.icon}
@@ -313,9 +321,9 @@ export default function Skills() {
                   <span
                     className="text-[10px] px-2 py-0.5 rounded-full font-medium"
                     style={{
-                      background: 'rgba(168,255,120,0.08)',
-                      border: '1px solid rgba(168,255,120,0.22)',
-                      color: '#a8ff78',
+                      background: 'rgba(234,88,12,0.08)',
+                      border: '1px solid rgba(234,88,12,0.22)',
+                      color: '#EA580C',
                     }}
                   >
                     {tool.level}
@@ -330,12 +338,12 @@ export default function Skills() {
         <FadeIn delay={0.35}>
           <div className="mt-16">
             <div className="flex items-center gap-4 mb-3">
-              <p className="text-xs uppercase tracking-widest" style={{ color: '#8a8f9e' }}>
+              <p className="text-xs uppercase tracking-widest" style={{ color: '#6B7280' }}>
                 相关证明
               </p>
-              <div className="flex-1 h-px" style={{ background: 'rgba(255,255,255,0.06)' }} />
+              <div className="flex-1 h-px" style={{ background: 'rgba(0,0,0,0.06)' }} />
             </div>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(240,240,240,0.35)' }}>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(24,24,24,0.35)' }}>
               奖学金与相关证明材料，点击可放大查看。
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -343,7 +351,7 @@ export default function Skills() {
                 <div
                   key={i}
                   className="rounded-xl overflow-hidden group cursor-zoom-in"
-                  style={{ border: '1px solid rgba(255,255,255,0.08)' }}
+                  style={{ border: '1px solid rgba(0,0,0,0.08)' }}
                   onClick={() => setCert(i)}
                   role="button"
                   aria-label={`放大查看相关证明 ${i + 1}`}
@@ -368,12 +376,12 @@ export default function Skills() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25 }}
           className="fixed inset-0 z-[100] flex items-center justify-center"
-          style={{ background: 'rgba(5,5,5,0.94)', backdropFilter: 'blur(10px)' }}
+          style={{ background: 'rgba(250,250,249,0.94)', backdropFilter: 'blur(10px)' }}
           onClick={() => setCert(null)}
         >
           <button
             className="absolute top-6 right-6 w-11 h-11 rounded-full flex items-center justify-center z-10 transition-all duration-300"
-            style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(240,240,240,0.8)' }}
+            style={{ background: 'rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.15)', color: 'rgba(24,24,24,0.8)' }}
             onClick={(e) => { e.stopPropagation(); setCert(null); }}
             aria-label="关闭预览"
           >
@@ -385,7 +393,7 @@ export default function Skills() {
           {cert > 0 && (
             <button
               className="absolute left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center z-10 transition-all duration-300"
-              style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(240,240,240,0.8)' }}
+              style={{ background: 'rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.15)', color: 'rgba(24,24,24,0.8)' }}
               onClick={(e) => { e.stopPropagation(); setCert(cert - 1); }}
               aria-label="上一张"
             >
@@ -406,7 +414,7 @@ export default function Skills() {
           {cert < certificates.length - 1 && (
             <button
               className="absolute right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center z-10 transition-all duration-300"
-              style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)', color: 'rgba(240,240,240,0.8)' }}
+              style={{ background: 'rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.15)', color: 'rgba(24,24,24,0.8)' }}
               onClick={(e) => { e.stopPropagation(); setCert(cert + 1); }}
               aria-label="下一张"
             >
@@ -418,7 +426,7 @@ export default function Skills() {
 
           <div
             className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-mono"
-            style={{ background: 'rgba(5,5,5,0.7)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(240,240,240,0.6)' }}
+            style={{ background: 'rgba(250,250,249,0.7)', border: '1px solid rgba(0,0,0,0.12)', color: 'rgba(24,24,24,0.6)' }}
           >
             {cert + 1} / {certificates.length}
           </div>

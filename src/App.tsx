@@ -39,7 +39,7 @@ export default function App() {
   }, []);
 
   const shell = (
-    <div className="grain" style={{ background: '#050505', minHeight: '100vh' }}>
+    <div className="grain" style={{ background: '#F2F2F0', minHeight: '100vh' }}>
       <Navbar />
       {route.page === 'project' ? (
         <ProjectDetail id={route.id} />
