@@ -233,16 +233,20 @@ export default function Skills() {
         {/* Tool logos row */}
         <FadeIn delay={0.3}>
           <div
-            className="mt-16 p-8 rounded-2xl flex flex-wrap items-center justify-between gap-6"
+            className="mt-16 p-8 md:p-12 rounded-[1.75rem]"
             style={{
               background: '#FFFFFF',
               border: '1px solid rgba(0,0,0,0.07)',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.05)',
             }}
           >
-            <p className="text-xs uppercase tracking-widest" style={{ color: '#6B7280' }}>
+            <h2
+              className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-8"
+              style={{ fontFamily: 'Space Grotesk, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif' }}
+            >
               常用设计工具
-            </p>
-            <div className="flex flex-wrap gap-6 items-center">
+            </h2>
+            <div className="flex flex-wrap gap-x-8 gap-y-4 items-center">
               {[
                 {
                   name: 'Photoshop',
