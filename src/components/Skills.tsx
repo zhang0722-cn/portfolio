@@ -18,7 +18,7 @@ const tools = [
   ['AI 工具', '辅助'],
 ];
 
-const certificates = ['certificates/cert-01.jpg', 'certificates/cert-02.jpg', 'certificates/cert-03.jpg', 'certificates/cert-04.jpg', 'certificates/cert-05.jpg'];
+const certificates = ['certificates/certificate-01.jpg', 'certificates/certificate-02.jpg', 'certificates/certificate-03.jpg', 'certificates/certificate-04.jpg', 'certificates/certificate-05.jpg'];
 
 export default function Skills() {
   const [active, setActive] = useState<number | null>(null);
