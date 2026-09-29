@@ -738,5 +738,5 @@ Expected: only commits if QA corrections were required.
 ## Self-Review
 
 - Spec coverage: visual tokens, navigation, Hero, About, Projects, Skills, Contact, ProjectDetail, responsive behavior, accessibility, verification, deployment, and rollback are covered.
-- Placeholder scan: no TBD, TODO, or deferred implementation language.
+- Placeholder scan: no unfinished placeholder markers or deferred implementation language.
 - Type consistency: all component props and data fields use names already present in `src/data/projects.ts` and existing components.
