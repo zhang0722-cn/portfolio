@@ -124,7 +124,7 @@ pnpm build
 
 Expected: no missing tokens and Vite build exits successfully.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 6: Commit**
 
 ```powershell
 git add src/index.css
@@ -270,7 +270,7 @@ pnpm build
 
 Expected: check passes and build succeeds.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 6: Commit**
 
 ```powershell
 git add src/App.tsx src/components/Navbar.tsx src/components/Ticker.tsx
@@ -476,7 +476,7 @@ pnpm build
 
 Expected: checks pass and build succeeds.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 6: Commit**
 
 ```powershell
 git add src/components/About.tsx src/components/Skills.tsx
@@ -562,7 +562,7 @@ pnpm build
 
 Expected: checks pass and build succeeds.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 6: Commit**
 
 ```powershell
 git add src/components/Projects.tsx
@@ -608,7 +608,17 @@ Expected before implementation: FAIL.
 </div>
 ```
 
-- [ ] **Step 3: Update `ProjectDetail.tsx` shared containers**
+- [ ] **Step 3: Normalize all remaining em-dashes**
+
+```powershell
+$projectData = 'src/data/projects.ts'
+$projectDetail = 'src/components/ProjectDetail.tsx'
+(Get-Content $projectData -Raw).Replace('2025.06 — 2025.11', '2025.06 - 2025.11').Replace('2026.04 — 2026.05', '2026.04 - 2026.05').Replace('设计 — 生产 — 市场', '设计 - 生产 - 市场') | Set-Content $projectData -Encoding utf8NoBOM
+(Get-Content $projectDetail -Raw).Replace("?? '—'", "?? '-'").Replace('>—<', '>-<') | Set-Content $projectDetail -Encoding utf8NoBOM
+if ((Get-Content $projectData, $projectDetail -Raw) -match '—') { throw 'Em-dash remains in project data or detail page' }
+```
+
+- [ ] **Step 4: Update `ProjectDetail.tsx` shared containers**
 
 ```tsx
 <main className="section-shell pb-28 pt-32">
@@ -625,7 +635,7 @@ Expected before implementation: FAIL.
 </main>
 ```
 
-- [ ] **Step 4: Run checks and build**
+- [ ] **Step 5: Run checks and build**
 
 ```powershell
 $contact = Get-Content src/components/Contact.tsx -Raw
@@ -635,7 +645,7 @@ pnpm build
 
 Expected: check passes and build succeeds.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 6: Commit**
 
 ```powershell
 git add src/components/Contact.tsx src/components/ProjectDetail.tsx
