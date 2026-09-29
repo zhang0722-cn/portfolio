@@ -36,7 +36,6 @@ export default function Contact() {
       <div className="section-shell grid grid-cols-1 items-start gap-10 py-20 lg:grid-cols-[1.15fr_.85fr] lg:gap-14 lg:py-24">
         <div>
           <p className="eyebrow mb-6">联系</p>
-          <h2 className="display max-w-4xl text-5xl font-bold leading-[.95] md:text-8xl">有合适的岗位或项目，直接联系我。</h2>
           <p className="mt-6 max-w-2xl text-base leading-8" style={{ color: 'var(--muted)' }}>求职方向为平面设计、品牌设计或视觉设计实习生岗位，也接受品牌、字体与印刷物料相关项目合作。</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="mailto:zhang07221207@163.com" className="rounded-full px-6 py-3 font-semibold" style={{ background: 'var(--accent)', color: '#fff' }}>发送邮件</a>
