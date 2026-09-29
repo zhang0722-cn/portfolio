@@ -157,30 +157,6 @@ export default function Hero() {
               </p>
             </motion.div>
 
-            {/* Main title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
-              className="font-bold leading-[0.93] tracking-tight"
-              style={{
-                fontSize: 'clamp(72px,15vw,280px)',
-                fontFamily: 'Space Grotesk, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif',
-              }}
-            >
-              <span className="block text-white">在这</span>
-              <span
-                className="block"
-                style={{
-                  background: 'linear-gradient(90deg, #EA580C 0%, #EA580C 55%, #EA580C 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                了解我
-              </span>
-            </motion.h1>
 
             {/* CTAs */}
             <motion.div
