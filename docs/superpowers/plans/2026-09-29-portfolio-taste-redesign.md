@@ -124,7 +124,7 @@ pnpm build
 
 Expected: no missing tokens and Vite build exits successfully.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 5: Commit**
 
 ```powershell
 git add src/index.css
@@ -270,7 +270,7 @@ pnpm build
 
 Expected: check passes and build succeeds.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 5: Commit**
 
 ```powershell
 git add src/App.tsx src/components/Navbar.tsx src/components/Ticker.tsx
@@ -476,7 +476,7 @@ pnpm build
 
 Expected: checks pass and build succeeds.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 5: Commit**
 
 ```powershell
 git add src/components/About.tsx src/components/Skills.tsx
@@ -562,7 +562,7 @@ pnpm build
 
 Expected: checks pass and build succeeds.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 5: Commit**
 
 ```powershell
 git add src/components/Projects.tsx
