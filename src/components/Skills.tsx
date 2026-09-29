@@ -46,7 +46,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 md:py-28" style={{ background: 'var(--paper-raised)' }}>
       <div className="section-shell grid gap-10 lg:grid-cols-[.55fr_1.45fr]">
-        <div><p className="eyebrow mb-6">能力范围</p><h2 className="display text-4xl font-bold md:text-6xl">从概念到成品，覆盖完整设计流程。</h2><p className="mt-5 max-w-xl text-sm leading-7" style={{ color: 'var(--muted)' }}>从品牌策略、视觉识别到字体与印刷物料，能够独立推进完整设计流程。</p></div>
+        <div><p className="eyebrow mb-6">能力范围</p><h2 className="display text-4xl font-bold md:text-6xl">完整设计流程</h2><p className="mt-5 max-w-xl text-sm leading-7" style={{ color: 'var(--muted)' }}>从品牌策略、视觉识别到字体与印刷物料，能够独立推进完整设计流程。</p></div>
         <div className="border-t" style={{ borderColor: 'var(--line)' }}>
           {groups.map(([title, desc, items]) => <article key={title as string} className="grid gap-4 border-b py-5 md:grid-cols-[180px_1fr]" style={{ borderColor: 'var(--line)' }}><h3 className="font-semibold">{title}</h3><div><p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>{desc}</p><div className="mt-3 flex flex-wrap gap-2">{(items as string[]).map((tool) => <span key={tool} className="text-xs" style={{ color: 'var(--accent)' }}>{tool}</span>)}</div></div></article>)}
         </div>
