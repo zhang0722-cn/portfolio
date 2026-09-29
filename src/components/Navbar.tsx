@@ -37,12 +37,12 @@ export default function Navbar() {
               <span className="text-xs" style={{ color: 'var(--muted)' }}>求职中</span>
               <a href="resume-zhanghaolei.pdf" download="张浩雷的简历.pdf" className="rounded-full px-4 py-2 text-xs font-semibold" style={{ background: 'var(--accent)', color: '#fff' }}>下载简历</a>
             </div>
-            <button className="md:hidden" aria-label="菜单" onClick={() => setOpen(!open)}><span className="display text-xl">{open ? '×' : '菜单'}</span></button>
+            <button className="md:hidden" aria-label="菜单" aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)}><span className="display text-xl">{open ? '×' : '菜单'}</span></button>
           </div>
         </div>
       </header>
       <AnimatePresence>
-        {open && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-40 flex flex-col justify-end gap-3 px-6 pb-16 md:hidden" style={{ background: 'rgba(247,246,242,.96)' }}>
+        {open && <motion.div id="mobile-menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-40 flex flex-col justify-end gap-3 px-6 pb-16 md:hidden" style={{ background: 'rgba(247,246,242,.96)' }}>
           {links.map((link) => <a key={link.label} href={link.href} onClick={() => setOpen(false)} className="display border-b py-4 text-4xl font-bold" style={{ borderColor: 'var(--line)' }}>{link.label}</a>)}
           <a href="resume-zhanghaolei.pdf" download="张浩雷的简历.pdf" className="mt-5 rounded-full px-5 py-3 text-center font-semibold" style={{ background: 'var(--accent)', color: '#fff' }}>下载简历</a>
         </motion.div>}

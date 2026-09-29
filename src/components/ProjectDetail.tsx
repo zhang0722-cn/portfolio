@@ -193,7 +193,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center"
+          role="dialog" aria-modal="true" aria-label="项目图片放大预览" className="fixed inset-0 z-[100] flex items-center justify-center"
           style={{ background: 'rgba(24,24,22,0.92)', backdropFilter: 'blur(10px)' }}
           onClick={() => setLightbox(null)}
         >

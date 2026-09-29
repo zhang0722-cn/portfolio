@@ -18,9 +18,6 @@ export default function Hero() {
             <a href="#projects" className="rounded-full px-6 py-3 text-sm font-semibold" style={{ background: 'var(--accent)', color: '#fff' }}>查看项目</a>
             <a href="resume-zhanghaolei.pdf" download="张浩雷的简历.pdf" className="rounded-full border px-6 py-3 text-sm font-semibold" style={{ borderColor: 'var(--line)' }}>下载简历</a>
           </div>
-          <div className="mt-14 flex gap-10 border-t pt-6" style={{ borderColor: 'var(--line)' }}>
-            {[['30+', '文创延展'], ['20', '量产落地'], ['80%', '售出率']].map(([value, label]) => <div key={label}><div className="display text-2xl font-bold">{value}</div><div className="mt-1 text-xs" style={{ color: 'var(--muted)' }}>{label}</div></div>)}
-          </div>
         </motion.div>
         <motion.figure initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, ease }} className="relative mx-auto w-full max-w-[520px] lg:justify-self-end">
           <div className="overflow-hidden" style={{ borderRadius: 'var(--radius-lg)', background: 'var(--paper-raised)' }}>
