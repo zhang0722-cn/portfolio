@@ -79,7 +79,6 @@ export default function About() {
 
           {/* 右栏：编辑式叙事 */}
           <Reveal>
-            <h2 className="display max-w-4xl text-4xl font-bold leading-tight md:text-6xl">用克制的视觉系统，把品牌想法变成可落地的真实物料。</h2>
 
             <div className="mt-8 space-y-3 text-[15px] leading-7" style={{ color: 'var(--muted)' }}>
               {selfIntro.map((p) => <p key={p}>{p}</p>)}
