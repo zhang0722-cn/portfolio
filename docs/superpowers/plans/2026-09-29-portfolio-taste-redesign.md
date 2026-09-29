@@ -112,6 +112,8 @@ body {
 }
 ```
 
+Delete the legacy `.glow-green`, `.glow-blue`, `.animated-border`, and `@keyframes border-rotate` blocks from `src/index.css`; the new Hero and navigation do not use them.
+
 - [ ] **Step 4: Run the design-token check and production build**
 
 ```powershell
@@ -150,7 +152,7 @@ git commit -m '重构作品集全局视觉变量'
 $app = Get-Content src/App.tsx -Raw
 $nav = Get-Content src/components/Navbar.tsx -Raw
 if ($app -match 'Ticker') { throw 'Ticker still imported' }
-if ($nav -match 'animated-border|backdropFilter') { throw 'Legacy navigation chrome still present' }
+if ($nav -match 'animated-border|rounded-full pl-4 pr-2') { throw 'Legacy navigation chrome still present' }
 ```
 
 Expected before implementation: FAIL because `Ticker` and legacy chrome exist.
@@ -264,7 +266,7 @@ Remove-Item src/components/Ticker.tsx
 $app = Get-Content src/App.tsx -Raw
 $nav = Get-Content src/components/Navbar.tsx -Raw
 if ($app -match 'Ticker') { throw 'Ticker still imported' }
-if ($nav -match 'animated-border|backdropFilter') { throw 'Legacy navigation chrome still present' }
+if ($nav -match 'animated-border|rounded-full pl-4 pr-2') { throw 'Legacy navigation chrome still present' }
 pnpm build
 ```
 
