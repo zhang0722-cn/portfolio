@@ -56,10 +56,10 @@ function Reveal({ children }: { children: React.ReactNode }) {
 
 export default function About() {
   return (
-    <section id="about" className="py-28 md:py-40">
+    <section id="about" className="py-20 md:py-28">
       <div className="section-shell">
         <p className="eyebrow mb-12">关于我</p>
-        <div className="grid gap-16 lg:grid-cols-[.65fr_1.35fr]">
+        <div className="grid gap-10 lg:grid-cols-[.65fr_1.35fr]">
           {/* 左栏：信息事实 */}
           <Reveal>
             <div className="border-t" style={{ borderColor: 'var(--line)' }}>
@@ -81,11 +81,11 @@ export default function About() {
           <Reveal>
             <h2 className="display max-w-4xl text-4xl font-bold leading-tight md:text-6xl">用克制的视觉系统，把品牌想法变成可落地的真实物料。</h2>
 
-            <div className="mt-12 space-y-4 text-[15px] leading-7" style={{ color: 'var(--muted)' }}>
+            <div className="mt-8 space-y-3 text-[15px] leading-7" style={{ color: 'var(--muted)' }}>
               {selfIntro.map((p) => <p key={p}>{p}</p>)}
             </div>
 
-            <div className="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="mt-8 grid grid-cols-2 lg:grid-cols-3 gap-3">
               {stats.map((s) => (
                 <div key={s.label} className="border-t pt-5" style={{ borderColor: 'var(--line)' }}>
                   <div className="text-3xl font-bold" style={{ color: 'var(--accent)', fontFamily: 'Space Grotesk' }}>{s.value}</div>
@@ -95,11 +95,11 @@ export default function About() {
               ))}
             </div>
 
-            <div className="mt-14 border-t" style={{ borderColor: 'var(--line)' }}>
-              {experience.map(([date, title, desc]) => <article key={date} className="grid gap-3 border-b py-6 md:grid-cols-[150px_1fr]" style={{ borderColor: 'var(--line)' }}><time className="text-xs" style={{ color: 'var(--muted)' }}>{date}</time><div><h3 className="font-semibold">{title}</h3><p className="mt-2 max-w-2xl text-sm leading-7" style={{ color: 'var(--muted)' }}>{desc}</p></div></article>)}
+            <div className="mt-10 border-t" style={{ borderColor: 'var(--line)' }}>
+              {experience.map(([date, title, desc]) => <article key={date} className="grid gap-3 border-b py-5 md:grid-cols-[150px_1fr]" style={{ borderColor: 'var(--line)' }}><time className="text-xs" style={{ color: 'var(--muted)' }}>{date}</time><div><h3 className="font-semibold">{title}</h3><p className="mt-2 max-w-2xl text-sm leading-7" style={{ color: 'var(--muted)' }}>{desc}</p></div></article>)}
             </div>
 
-            <div className="mt-14 border-t pt-8" style={{ borderColor: 'var(--line)' }}>
+            <div className="mt-10 border-t pt-6" style={{ borderColor: 'var(--line)' }}>
               <p className="eyebrow mb-5">主修课程</p>
               <div className="flex flex-wrap gap-2">
                 {courses.map((c) => <span key={c} className="text-xs px-3 py-1.5" style={{ color: 'var(--muted)', border: '1px solid var(--line)', borderRadius: 'var(--radius-md)' }}>{c}</span>)}

@@ -44,19 +44,19 @@ export default function Skills() {
   const next = () => setActive((cur) => (cur === null ? null : cur < certificates.length - 1 ? cur + 1 : cur));
 
   return (
-    <section id="skills" className="py-28 md:py-40" style={{ background: 'var(--paper-raised)' }}>
-      <div className="section-shell grid gap-16 lg:grid-cols-[.55fr_1.45fr]">
-        <div><p className="eyebrow mb-6">能力范围</p><h2 className="display text-4xl font-bold md:text-6xl">从概念到成品，覆盖完整设计流程。</h2></div>
+    <section id="skills" className="py-20 md:py-28" style={{ background: 'var(--paper-raised)' }}>
+      <div className="section-shell grid gap-10 lg:grid-cols-[.55fr_1.45fr]">
+        <div><p className="eyebrow mb-6">能力范围</p><h2 className="display text-4xl font-bold md:text-6xl">从概念到成品，覆盖完整设计流程。</h2><p className="mt-5 max-w-xl text-sm leading-7" style={{ color: 'var(--muted)' }}>从品牌策略、视觉识别到字体与印刷物料，能够独立推进完整设计流程。</p></div>
         <div className="border-t" style={{ borderColor: 'var(--line)' }}>
-          {groups.map(([title, desc, items]) => <article key={title as string} className="grid gap-4 border-b py-7 md:grid-cols-[180px_1fr]" style={{ borderColor: 'var(--line)' }}><h3 className="font-semibold">{title}</h3><div><p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>{desc}</p><div className="mt-3 flex flex-wrap gap-2">{(items as string[]).map((tool) => <span key={tool} className="text-xs" style={{ color: 'var(--accent)' }}>{tool}</span>)}</div></div></article>)}
+          {groups.map(([title, desc, items]) => <article key={title as string} className="grid gap-4 border-b py-5 md:grid-cols-[180px_1fr]" style={{ borderColor: 'var(--line)' }}><h3 className="font-semibold">{title}</h3><div><p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>{desc}</p><div className="mt-3 flex flex-wrap gap-2">{(items as string[]).map((tool) => <span key={tool} className="text-xs" style={{ color: 'var(--accent)' }}>{tool}</span>)}</div></div></article>)}
         </div>
       </div>
 
-      <div className="section-shell mt-20">
+      <div className="section-shell mt-12">
         <p className="eyebrow mb-5">常用设计工具</p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border-t border-l" style={{ borderColor: 'var(--line)' }}>
           {tools.map(([name, level]) => (
-            <div key={name} className="border-b border-r p-5" style={{ borderColor: 'var(--line)' }}>
+            <div key={name} className="border-b border-r p-4" style={{ borderColor: 'var(--line)' }}>
               <div className="text-sm font-semibold">{name}</div>
               <div className="mt-2 text-xs" style={{ color: 'var(--accent)' }}>{level}</div>
             </div>
@@ -64,7 +64,7 @@ export default function Skills() {
         </div>
       </div>
 
-      <div className="section-shell mt-20">
+      <div className="section-shell mt-12">
         <p className="eyebrow mb-5">相关证明</p>
         <p className="mb-6 text-sm leading-7" style={{ color: 'var(--muted)' }}>奖学金与相关证明材料，点击可放大查看。</p>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
