@@ -53,7 +53,7 @@ export default function Contact() {
       </div>
 
       <div className="border-t" style={{ borderColor: 'var(--line)' }}>
-        <div className="section-shell flex items-center justify-between py-6">
+        <div className="section-shell flex flex-col items-start gap-4 py-6 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
           <p className="text-xs" style={{ color: 'var(--muted)' }}>© 2026 张浩雷 · 保留所有权利</p>
           <div className="flex items-center gap-6">
             {[

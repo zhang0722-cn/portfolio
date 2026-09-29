@@ -14,6 +14,9 @@ function getRoute(): Route {
   return match ? { page: 'project', id: match[1] } : { page: 'home' };
 }
 
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 export default function App() {
   const [route, setRoute] = useState<Route>(getRoute);
 
@@ -22,7 +25,7 @@ export default function App() {
       setRoute(getRoute());
       const hash = window.location.hash.replace(/^#\/?/, '');
       if (hash.startsWith('project/')) window.scrollTo(0, 0);
-      else if (hash) setTimeout(() => document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' }), 60);
+      else if (hash) setTimeout(() => document.getElementById(hash)?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth' }), 60);
       else window.scrollTo(0, 0);
     };
     window.addEventListener('hashchange', onHashChange);
