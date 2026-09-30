@@ -119,6 +119,7 @@ export const projects: Project[] = [
     desc: '参与原创中文字体「禅黑体」设计开发，负责汉字字形手稿绘制与数字化转译，使用 Glyphs 完成字模曲线调整与字距优化。',
     year: '2026',
     img: 'chanheiti-cover.png',
+    coverRatio: '16/9',
     accent: '#EA580C',
     size: 'small',
     client: '杭州聿书堂文化艺术有限公司',

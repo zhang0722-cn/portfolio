@@ -97,7 +97,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
             <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
               {project.gallery.map((g, i) => (
                 <div key={i} className="overflow-hidden" style={{ borderRadius: 'var(--radius-lg)' }}>
-                  <img src={g} alt={`${project.title} 图 ${i + 1}`} className="w-full object-cover" style={{ aspectRatio: '4/3' }} />
+                  <img src={g} alt={`${project.title} 图 ${i + 1}`} className="h-auto w-full object-contain" />
                 </div>
               ))}
             </div>
