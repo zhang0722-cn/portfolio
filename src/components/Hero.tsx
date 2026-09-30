@@ -13,7 +13,7 @@ export default function Hero() {
     <section id="hero" className="relative overflow-hidden pt-20">
       <div className="section-shell grid grid-cols-1 items-center gap-10 py-10 lg:grid-cols-[1.15fr_.85fr] lg:gap-14 lg:py-14">
         <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, ease }}>
-          <p className="eyebrow mb-5">视觉传达设计 / 江西九江</p>
+          <p className="eyebrow mb-5">视觉传达设计 / 浙江杭州</p>
           <h1 className="display max-w-5xl text-[clamp(64px,11vw,176px)] font-bold leading-[.82]">
             张浩雷
           </h1>

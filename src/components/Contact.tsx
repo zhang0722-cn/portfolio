@@ -3,7 +3,7 @@ import { useState } from 'react';
 const contacts = [
   { label: '邮箱', value: 'zhang07221207@163.com', href: 'mailto:zhang07221207@163.com' },
   { label: '电话', value: '16643075859', href: 'tel:16643075859' },
-  { label: '现居', value: '江西九江', href: '#' },
+  { label: '现居', value: '浙江杭州', href: '#' },
   { label: '求职意向', value: '平面/品牌设计 助理', href: '#' },
 ];
 
