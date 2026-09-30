@@ -66,7 +66,7 @@ export default function Projects() {
     <section id="projects" className="py-20 md:py-28">
       <div className="section-shell">
         <div className="mb-10 flex items-end justify-between gap-8">
-          <div><p className="eyebrow mb-5">精选项目</p><h2 className="display text-4xl font-bold md:text-6xl">作品优先。</h2></div>
+          <div><p className="eyebrow mb-5">精选项目</p><h2 className="display text-4xl font-bold md:text-6xl">作品展示</h2></div>
           <p className="hidden max-w-sm text-sm leading-7 md:block" style={{ color: 'var(--muted)' }}>三个完整项目，覆盖品牌识别、字体设计与实际物料落地。</p>
         </div>
         <div className="space-y-12 md:space-y-16">{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</div>
