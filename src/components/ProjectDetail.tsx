@@ -1,6 +1,19 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { projects } from '../data/projects';
+import { projects, type Project } from '../data/projects';
+type ProjectNavItem = { id: string; label: string };
+
+function getProjectNavItems(project: Project | undefined): ProjectNavItem[] {
+  if (!project) return [];
+  const items: ProjectNavItem[] = [
+    { id: 'overview', label: '概览' },
+    { id: 'project-intro', label: '项目简介' },
+  ];
+  if (project.contentImages?.length || project.gallery.length > 0) items.push({ id: 'project-gallery', label: project.contentImages?.length ? '项目内容' : '项目图集' });
+  items.push({ id: 'project-role', label: '工作内容' }, { id: 'project-results', label: '项目成果' });
+  if (project.endDocument) items.push({ id: 'project-document', label: '完整文档' });
+  return items;
+}
 
 export default function ProjectDetail({ id }: { id: string | null }) {
   const project = projects.find((p) => String(p.id) === id);
@@ -9,6 +22,21 @@ export default function ProjectDetail({ id }: { id: string | null }) {
   const next = index >= 0 && index < projects.length - 1 ? projects[index + 1] : null;
 
   const [lightbox, setLightbox] = useState<{ list: string[]; index: number } | null>(null);
+
+  const navItems = getProjectNavItems(project);
+  const navKey = navItems.map((item) => item.id).join('|');
+  const [activeSection, setActiveSection] = useState('overview');
+
+  useEffect(() => {
+    const sections = navItems.map((item) => document.getElementById(item.id)).filter(Boolean) as HTMLElement[];
+    if (!sections.length) return;
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible[0]?.target.id) setActiveSection(visible[0].target.id);
+    }, { rootMargin: '-24% 0px -64% 0px', threshold: [0, 0.25, 0.5] });
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [project?.id, navKey]);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -40,10 +68,10 @@ export default function ProjectDetail({ id }: { id: string | null }) {
 
   return (
     <>
-      <main className="section-shell pb-28 pt-32">
+      <main className="section-shell pb-28 pt-32 xl:pr-20">
         <a href="#/" className="eyebrow inline-block mb-16">返回项目列表</a>
 
-        <header className="grid gap-8 border-b pb-10 lg:grid-cols-[1fr_320px]" style={{ borderColor: 'var(--line)' }}>
+        <header id="overview" className="scroll-mt-28 grid gap-8 border-b pb-10 lg:grid-cols-[1fr_320px]" style={{ borderColor: 'var(--line)' }}>
           <h1 className="display text-5xl font-bold leading-[.95] md:text-8xl">{project.title}</h1>
           <dl className="space-y-3 text-sm">
             <div className="flex justify-between gap-6"><dt style={{ color: 'var(--muted)' }}>年份</dt><dd>{project.year}</dd></div>
@@ -67,7 +95,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           ))}
         </div>
 
-        <section className="mt-20">
+        <section id="project-intro" className="mt-20 scroll-mt-28">
           <h2 className="display text-2xl font-bold">项目简介</h2>
           <p className="mt-6 max-w-3xl text-[15px] leading-7" style={{ color: 'var(--muted)' }}>{project.overview}</p>
           <div className="mt-8 space-y-4">
@@ -104,7 +132,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           )}
         </section>
 
-        <section className="mt-20">
+        <section id="project-role" className="mt-20 scroll-mt-28">
           <h2 className="display text-2xl font-bold">工作内容与职责</h2>
           <div className="mt-8 border-t" style={{ borderColor: 'var(--line)' }}>
             {project.responsibilities.map((r, i) => (
@@ -126,7 +154,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           </div>
         </section>
 
-        <section className="mt-20">
+        <section id="project-results" className="mt-20 scroll-mt-28">
           <h2 className="display text-2xl font-bold">项目成果</h2>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             {project.results.map((r, i) => (
@@ -153,10 +181,9 @@ export default function ProjectDetail({ id }: { id: string | null }) {
         )}
 
         {project.endDocument && (
-          <section className="mt-20">
+          <section id="project-document" className="mt-20 scroll-mt-28">
             <div className="flex flex-col gap-4 border-t pt-8 md:flex-row md:items-end md:justify-between" style={{ borderColor: 'var(--line)' }}>
               <div>
-                <p className="eyebrow mb-3">完整文档</p>
                 <h2 className="display text-2xl font-bold md:text-3xl">{project.endDocument.title}</h2>
               </div>
               <a href={project.endDocument.src} target="_blank" rel="noreferrer" className="text-sm font-semibold" style={{ color: 'var(--accent)' }}>在新窗口打开 PDF</a>
@@ -201,6 +228,18 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           </div>
         </div>
       </main>
+
+      <nav aria-label="项目页导航" className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-3 xl:flex">
+        {navItems.map((item) => {
+          const active = activeSection === item.id;
+          return (
+            <button key={item.id} type="button" onClick={() => { setActiveSection(item.id); document.getElementById(item.id)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); }} aria-current={active ? 'location' : undefined} className="group flex items-center justify-end gap-3">
+              <span className="text-[10px] tracking-[.12em]" style={{ color: active ? 'var(--accent)' : 'var(--muted)', opacity: active ? 1 : 0.65 }}>{item.label}</span>
+              <span className="h-px" style={{ width: active ? 30 : 16, background: active ? 'var(--accent)' : 'var(--line)', transition: 'all .3s var(--ease-premium)' }} />
+            </button>
+          );
+        })}
+      </nav>
 
       {lightbox !== null && (
         <motion.div
