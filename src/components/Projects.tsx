@@ -19,7 +19,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>{project.category}</span><span>{project.year}</span></div>
           <h3 className="display text-4xl font-bold leading-[0.95] md:text-6xl">{project.title}</h3>
           <a href={`#/project/${project.id}`} className="block overflow-hidden" style={{ borderRadius: 'var(--radius-lg)' }}>
-            <img src={project.img} alt={project.title} loading="lazy" className="w-full object-cover transition-transform duration-700 hover:scale-[1.02]" style={{ aspectRatio: project.coverRatio ?? '16/9' }} />
+            <img src={project.img} alt={project.title} loading="lazy" className="w-full object-contain transition-opacity duration-500 hover:opacity-90" style={{ aspectRatio: project.coverRatio ?? '16/9' }} />
           </a>
           <div className="grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-12">
             <div className="grid grid-cols-3 gap-4 border-t pt-5 text-xs" style={{ borderColor: 'var(--line)' }}>
@@ -40,7 +40,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       ) : (
         <div className={`grid grid-cols-1 items-end gap-6 ${layouts[index] ?? layouts[1]}`}>
           <a href={`#/project/${project.id}`} className={`block overflow-hidden ${imageOrder}`} style={{ borderRadius: 'var(--radius-lg)' }}>
-            <img src={project.img} alt={project.title} loading="lazy" className="w-full object-cover transition-transform duration-700 hover:scale-[1.02]" style={{ aspectRatio: index === 0 ? '16/9' : project.coverRatio ?? '4/3' }} />
+            <img src={project.img} alt={project.title} loading="lazy" className="w-full object-contain transition-opacity duration-500 hover:opacity-90" style={{ aspectRatio: index === 0 ? '16/9' : project.coverRatio ?? '4/3' }} />
           </a>
           <div className="pb-2">
             <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>{project.category}</span><span>{project.year}</span></div>
