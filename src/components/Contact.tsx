@@ -53,7 +53,7 @@ export default function Contact({ onViewResume }: { onViewResume: () => void }) 
           </div>
           <div className="border-t pt-6" style={{ borderColor: 'var(--line)' }}>
             <div className="flex items-start gap-5">
-              <img src="wechat-qr.png" alt="张浩雷微信二维码" loading="lazy" className="h-28 w-28 shrink-0 object-contain" />
+              <img src="wechat-qr.webp" alt="张浩雷微信二维码" loading="lazy" className="h-28 w-28 shrink-0 object-contain" />
               <div>
                 <p className="font-semibold">微信联系</p>
                 <p className="mt-2 text-sm leading-7" style={{ color: 'var(--muted)' }}>扫码添加微信，备注求职或项目合作即可。</p>
