@@ -14,24 +14,49 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
   return (
     <motion.article ref={ref} initial={{ opacity: 0, y: 32 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: .8, ease }} className="border-t pt-5" style={{ borderColor: 'var(--line)' }}>
-      <div className={`grid grid-cols-1 items-end gap-6 ${layouts[index] ?? layouts[1]}`}>
-        <a href={`#/project/${project.id}`} className={`block overflow-hidden ${imageOrder}`} style={{ borderRadius: 'var(--radius-lg)' }}>
-          <img src={project.img} alt={project.title} loading="lazy" className="w-full object-cover transition-transform duration-700 hover:scale-[1.02]" style={{ aspectRatio: index === 0 ? '16/9' : project.coverRatio ?? '4/3' }} />
-        </a>
-        <div className="pb-2">
+      {index === 2 ? (
+        <div className="space-y-6">
           <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>{project.category}</span><span>{project.year}</span></div>
-          <h3 className="display mt-5 text-3xl font-bold md:text-5xl">{project.title}</h3>
-          <p className="mt-4 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.desc}</p>
-          <p className="mt-3 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.overview}</p>
-          <div className="mt-5 grid gap-2 border-t pt-4 text-xs sm:grid-cols-3" style={{ borderColor: 'var(--line)' }}>
-            <div><span style={{ color: 'var(--muted)' }}>角色</span><p className="mt-1">{project.role}</p></div>
-            <div><span style={{ color: 'var(--muted)' }}>周期</span><p className="mt-1">{project.period ?? '项目周期'}</p></div>
-            <div><span style={{ color: 'var(--muted)' }}>客户</span><p className="mt-1">{project.client ?? '个人项目'}</p></div>
+          <h3 className="display text-4xl font-bold leading-[0.95] md:text-6xl">{project.title}</h3>
+          <a href={`#/project/${project.id}`} className="block overflow-hidden" style={{ borderRadius: 'var(--radius-lg)' }}>
+            <img src={project.img} alt={project.title} loading="lazy" className="w-full object-cover transition-transform duration-700 hover:scale-[1.02]" style={{ aspectRatio: project.coverRatio ?? '16/9' }} />
+          </a>
+          <div className="grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-12">
+            <div className="grid grid-cols-3 gap-4 border-t pt-5 text-xs" style={{ borderColor: 'var(--line)' }}>
+              <div><span style={{ color: 'var(--muted)' }}>角色</span><p className="mt-2">{project.role}</p></div>
+              <div><span style={{ color: 'var(--muted)' }}>周期</span><p className="mt-2">{project.period ?? '项目周期'}</p></div>
+              <div><span style={{ color: 'var(--muted)' }}>客户</span><p className="mt-2">{project.client ?? '个人项目'}</p></div>
+            </div>
+            <div className="border-t pt-5" style={{ borderColor: 'var(--line)' }}>
+              <p className="text-sm leading-7" style={{ color: 'var(--muted)' }}>{project.desc}</p>
+              <p className="mt-4 text-sm leading-7" style={{ color: 'var(--muted)' }}>{project.overview}</p>
+              <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+                <div className="flex flex-wrap gap-3 text-xs" style={{ color: 'var(--accent)' }}>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                <a href={`#/project/${project.id}`} className="text-sm font-semibold" style={{ color: 'var(--accent)' }}>查看项目详情</a>
+              </div>
+            </div>
           </div>
-          <div className="mt-4 flex flex-wrap gap-3 text-xs" style={{ color: 'var(--accent)' }}>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-          <a href={`#/project/${project.id}`} className="mt-5 inline-block text-sm font-semibold" style={{ color: 'var(--accent)' }}>查看项目详情</a>
         </div>
-      </div>
+      ) : (
+        <div className={`grid grid-cols-1 items-end gap-6 ${layouts[index] ?? layouts[1]}`}>
+          <a href={`#/project/${project.id}`} className={`block overflow-hidden ${imageOrder}`} style={{ borderRadius: 'var(--radius-lg)' }}>
+            <img src={project.img} alt={project.title} loading="lazy" className="w-full object-cover transition-transform duration-700 hover:scale-[1.02]" style={{ aspectRatio: index === 0 ? '16/9' : project.coverRatio ?? '4/3' }} />
+          </a>
+          <div className="pb-2">
+            <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>{project.category}</span><span>{project.year}</span></div>
+            <h3 className="display mt-5 text-3xl font-bold md:text-5xl">{project.title}</h3>
+            <p className="mt-4 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.desc}</p>
+            <p className="mt-3 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.overview}</p>
+            <div className="mt-5 grid gap-2 border-t pt-4 text-xs sm:grid-cols-3" style={{ borderColor: 'var(--line)' }}>
+              <div><span style={{ color: 'var(--muted)' }}>角色</span><p className="mt-1">{project.role}</p></div>
+              <div><span style={{ color: 'var(--muted)' }}>周期</span><p className="mt-1">{project.period ?? '项目周期'}</p></div>
+              <div><span style={{ color: 'var(--muted)' }}>客户</span><p className="mt-1">{project.client ?? '个人项目'}</p></div>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-3 text-xs" style={{ color: 'var(--accent)' }}>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+            <a href={`#/project/${project.id}`} className="mt-5 inline-block text-sm font-semibold" style={{ color: 'var(--accent)' }}>查看项目详情</a>
+          </div>
+        </div>
+      )}
     </motion.article>
   );
 }
