@@ -8,7 +8,7 @@ const capabilities = [
   ['物料落地', '印刷、供应商与制作文件'],
 ];
 
-export default function Hero() {
+export default function Hero({ onViewResume }: { onViewResume: () => void }) {
   return (
     <section id="hero" className="relative overflow-hidden pt-20">
       <div className="section-shell grid grid-cols-1 items-center gap-10 py-10 lg:grid-cols-[1.15fr_.85fr] lg:gap-14 lg:py-14">
@@ -31,7 +31,7 @@ export default function Hero() {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects" className="rounded-full px-6 py-3 text-sm font-semibold" style={{ background: 'var(--accent)', color: '#fff' }}>查看项目</a>
-            <a href="resume-zhanghaolei-2026.pdf" download="张浩雷的简历.pdf" className="rounded-full border px-6 py-3 text-sm font-semibold" style={{ borderColor: 'var(--line)' }}>下载简历</a>
+            <button type="button" onClick={onViewResume} className="rounded-full border px-6 py-3 text-sm font-semibold" style={{ borderColor: 'var(--line)' }}>查看简历</button>
           </div>
         </motion.div>
       </div>

@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
+import ResumeViewer from './components/ResumeViewer';
 
 type Route = { page: 'home' } | { page: 'project'; id: string | null };
 
@@ -19,6 +20,7 @@ const prefersReducedMotion = () =>
 
 export default function App() {
   const [route, setRoute] = useState<Route>(getRoute);
+  const [resumeOpen, setResumeOpen] = useState(false);
 
   useEffect(() => {
     const onHashChange = () => {
@@ -34,10 +36,11 @@ export default function App() {
 
   return (
     <div style={{ background: 'var(--paper)', minHeight: '100vh' }}>
-      <Navbar />
+      <Navbar onViewResume={() => setResumeOpen(true)} />
       {route.page === 'project' ? <ProjectDetail id={route.id} /> : (
-        <main><Hero /><About /><Projects /><Skills /><Contact /></main>
+        <main><Hero onViewResume={() => setResumeOpen(true)} /><About /><Projects /><Skills /><Contact onViewResume={() => setResumeOpen(true)} /></main>
       )}
+      <ResumeViewer open={resumeOpen} onClose={() => setResumeOpen(false)} />
     </div>
   );
 }
