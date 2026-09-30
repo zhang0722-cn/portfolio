@@ -161,11 +161,7 @@ export const projects: Project[] = [
       '通过 Glyphs 完成字模曲线与字距的系统化优化',
       '项目设计进行中，尚未正式发布',
     ],
-    gallery: [
-      'chanheiti-cover.png',
-      'https://images.pexels.com/photos/8489951/pexels-photo-8489951.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
-      'https://images.pexels.com/photos/4464879/pexels-photo-4464879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
-    ],
+    gallery: [],
     stats: [
       { value: 'Glyphs', label: '核心工具', desc: '曲线调整与字距优化' },
       { value: '手稿→数字', label: '工作流', desc: '字形手稿数字化转译' },
