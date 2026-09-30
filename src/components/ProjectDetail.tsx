@@ -116,7 +116,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
                 {project.contentImages.map((g, i) => (
                   <div key={i} className="group cursor-zoom-in overflow-hidden" style={{ borderRadius: 'var(--radius-lg)' }} onClick={() => setLightbox({ list: project.contentImages!, index: i })} role="button" aria-label={`放大查看 ${project.title} 项目内容 ${i + 1}`}>
-                    <img src={g} alt={`${project.title} 项目内容 ${i + 1}`} className="w-full object-cover transition-transform duration-700 group-hover:scale-105" style={{ aspectRatio: '16/9' }} />
+                    <picture><source media="(max-width: 767px)" srcSet={g.replace(/\.webp$/, '-mobile.webp')} type="image/webp" /><img src={g} alt={`${project.title} 项目内容 ${i + 1}`} loading="lazy" decoding="async" className="w-full object-cover transition-transform duration-700 group-hover:scale-105" style={{ aspectRatio: '16/9' }} /></picture>
                   </div>
                 ))}
               </div>
