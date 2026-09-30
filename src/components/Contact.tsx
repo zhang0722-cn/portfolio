@@ -39,7 +39,7 @@ export default function Contact() {
           <p className="mt-6 max-w-2xl text-base leading-8" style={{ color: 'var(--muted)' }}>求职方向为平面设计、品牌设计或视觉设计实习生岗位，也接受品牌、字体与印刷物料相关项目合作。</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="mailto:zhang07221207@163.com" className="rounded-full px-6 py-3 font-semibold" style={{ background: 'var(--accent)', color: '#fff' }}>发送邮件</a>
-            <a href="resume-zhanghaolei.pdf" download="张浩雷的简历.pdf" className="rounded-full border px-6 py-3 font-semibold" style={{ borderColor: 'var(--line)' }}>下载简历</a>
+            <a href="resume-zhanghaolei-2026.pdf" download="张浩雷的简历.pdf" className="rounded-full border px-6 py-3 font-semibold" style={{ borderColor: 'var(--line)' }}>下载简历</a>
           </div>
         </div>
         <div className="space-y-8">
