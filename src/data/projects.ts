@@ -13,6 +13,7 @@ export type Project = {
   resultsImages?: string[];
   client?: string;
   role: string;
+  cardTitle?: string;
   status?: string;
   period?: string;
   overview: string;
@@ -26,7 +27,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 1,
-    title: '项目一',
+    title: '龙虎山文旅品牌视觉形象设计',
+    cardTitle: '项目一',
     category: '品牌设计',
     tags: ['VI 系统', 'Logo 设计', '文创产品'],
     desc: '以江西龙虎山道教文化为核心，从0到1打造完整品牌视觉形象，延展30个品类文创设计，推动20款量产，平均售出率80%。',
@@ -113,7 +115,8 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: '项目二',
+    title: '「禅黑体」中文字体辅助设计',
+    cardTitle: '项目二',
     category: '字体设计',
     tags: ['Glyphs', '字距优化', '中文字体'],
     desc: '参与原创中文字体「禅黑体」设计开发，负责汉字字形手稿绘制与数字化转译，使用 Glyphs 完成字模曲线调整与字距优化。',
@@ -171,7 +174,8 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: '项目三',
+    title: '「三桥菜市场」品牌视觉重建',
+    cardTitle: '项目三',
     category: '视觉设计',
     tags: ['灯牌设计', '品类标识', 'AI + PS'],
     desc: '实地调研梳理摊位视觉痛点，统一品类灯牌字体、色彩、尺寸规范，分品类配色帮助消费者快速定位目标摊位。',

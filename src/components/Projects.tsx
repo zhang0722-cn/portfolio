@@ -17,7 +17,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       {index === 2 ? (
         <div className="space-y-6">
           <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>{project.category}</span><span>{project.year}</span></div>
-          <h3 className="display text-4xl font-bold leading-[0.95] md:text-6xl">{project.title}</h3>
+          <h3 className="display text-4xl font-bold leading-[0.95] md:text-6xl">{project.cardTitle ?? project.title}</h3>
           <a href={`#/project/${project.id}`} className="block overflow-hidden" style={{ borderRadius: 'var(--radius-lg)' }}>
             <img src={project.img} alt={project.title} loading="lazy" className="w-full object-contain transition-opacity duration-500 hover:opacity-90" style={{ aspectRatio: project.coverRatio ?? '16/9' }} />
           </a>
@@ -44,7 +44,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </a>
           <div className={index === 1 ? 'flex h-full flex-col pb-2' : 'pb-2'}>
             <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>{project.category}</span><span>{project.year}</span></div>
-            <h3 className="display mt-5 text-3xl font-bold md:text-5xl">{project.title}</h3>
+            <h3 className="display mt-5 text-3xl font-bold md:text-5xl">{project.cardTitle ?? project.title}</h3>
             <p className="mt-4 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.desc}</p>
             <p className="mt-3 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.overview}</p>
             <div className={index === 1 ? 'mt-auto grid gap-2 border-t pt-4 text-xs sm:grid-cols-3' : 'mt-5 grid gap-2 border-t pt-4 text-xs sm:grid-cols-3'} style={{ borderColor: 'var(--line)' }}>
