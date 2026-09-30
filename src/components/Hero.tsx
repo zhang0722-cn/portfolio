@@ -34,12 +34,6 @@ export default function Hero() {
             <a href="resume-zhanghaolei-2026.pdf" download="张浩雷的简历.pdf" className="rounded-full border px-6 py-3 text-sm font-semibold" style={{ borderColor: 'var(--line)' }}>下载简历</a>
           </div>
         </motion.div>
-        <motion.figure initial={{ opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, ease }} className="relative mx-auto w-full max-w-[520px] lg:justify-self-end">
-          <div className="overflow-hidden" style={{ borderRadius: 'var(--radius-lg)', background: 'var(--paper-raised)' }}>
-            <img src="portrait.jpg" alt="张浩雷" className="aspect-[4/5] w-full object-cover" fetchPriority="high" />
-          </div>
-          <figcaption className="mt-3 flex justify-between text-xs" style={{ color: 'var(--muted)' }}><span>视觉传达设计</span><span>2026</span></figcaption>
-        </motion.figure>
       </div>
     </section>
   );
