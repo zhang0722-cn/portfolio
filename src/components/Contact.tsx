@@ -42,13 +42,24 @@ export default function Contact() {
             <a href="resume-zhanghaolei.pdf" download="张浩雷的简历.pdf" className="rounded-full border px-6 py-3 font-semibold" style={{ borderColor: 'var(--line)' }}>下载简历</a>
           </div>
         </div>
-        <div className="border-t" style={{ borderColor: 'var(--line)' }}>
-          {contacts.map((item) => (
-            <a key={item.label} href={item.href} className="grid grid-cols-[90px_1fr] border-b py-4 text-sm" style={{ borderColor: 'var(--line)' }}>
-              <span style={{ color: 'var(--muted)' }}>{item.label}</span>
-              <span>{item.value}</span>
-            </a>
-          ))}
+        <div className="space-y-8">
+          <div className="border-t" style={{ borderColor: 'var(--line)' }}>
+            {contacts.map((item) => (
+              <a key={item.label} href={item.href} className="grid grid-cols-[90px_1fr] border-b py-4 text-sm" style={{ borderColor: 'var(--line)' }}>
+                <span style={{ color: 'var(--muted)' }}>{item.label}</span>
+                <span>{item.value}</span>
+              </a>
+            ))}
+          </div>
+          <div className="border-t pt-6" style={{ borderColor: 'var(--line)' }}>
+            <div className="flex items-start gap-5">
+              <img src="wechat-qr.png" alt="张浩雷微信二维码" loading="lazy" className="h-28 w-28 shrink-0 object-contain" />
+              <div>
+                <p className="font-semibold">微信联系</p>
+                <p className="mt-2 text-sm leading-7" style={{ color: 'var(--muted)' }}>扫码添加微信，备注求职或项目合作即可。</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
