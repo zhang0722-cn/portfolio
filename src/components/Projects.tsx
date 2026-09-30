@@ -38,16 +38,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </div>
         </div>
       ) : (
-        <div className={`grid grid-cols-1 items-end gap-6 ${layouts[index] ?? layouts[1]}`}>
+        <div className={`grid grid-cols-1 ${index === 1 ? 'items-stretch' : 'items-end'} gap-6 ${layouts[index] ?? layouts[1]}`}>
           <a href={`#/project/${project.id}`} className={`block overflow-hidden ${imageOrder}`} style={{ borderRadius: 'var(--radius-lg)' }}>
             <img src={project.img} alt={project.title} loading="lazy" className="w-full object-contain transition-opacity duration-500 hover:opacity-90" style={{ aspectRatio: index === 0 ? '16/9' : project.coverRatio ?? '4/3' }} />
           </a>
-          <div className="pb-2">
+          <div className={index === 1 ? 'flex h-full flex-col pb-2' : 'pb-2'}>
             <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>{project.category}</span><span>{project.year}</span></div>
             <h3 className="display mt-5 text-3xl font-bold md:text-5xl">{project.title}</h3>
             <p className="mt-4 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.desc}</p>
             <p className="mt-3 max-w-xl text-sm leading-6" style={{ color: 'var(--muted)' }}>{project.overview}</p>
-            <div className="mt-5 grid gap-2 border-t pt-4 text-xs sm:grid-cols-3" style={{ borderColor: 'var(--line)' }}>
+            <div className={index === 1 ? 'mt-auto grid gap-2 border-t pt-4 text-xs sm:grid-cols-3' : 'mt-5 grid gap-2 border-t pt-4 text-xs sm:grid-cols-3'} style={{ borderColor: 'var(--line)' }}>
               <div><span style={{ color: 'var(--muted)' }}>角色</span><p className="mt-1">{project.role}</p></div>
               <div><span style={{ color: 'var(--muted)' }}>周期</span><p className="mt-1">{project.period ?? '项目周期'}</p></div>
               <div><span style={{ color: 'var(--muted)' }}>客户</span><p className="mt-1">{project.client ?? '个人项目'}</p></div>
