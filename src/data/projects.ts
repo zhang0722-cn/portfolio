@@ -223,11 +223,7 @@ export const projects: Project[] = [
       '输出全部摊位灯牌效果图及制作文件',
       '因实习期满离职，后续落地情况不详',
     ],
-    gallery: [
-      'sanqiao-cover.png',
-      'https://images.pexels.com/photos/17483908/pexels-photo-17483908.png?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
-      'https://images.pexels.com/photos/8489951/pexels-photo-8489951.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
-    ],
+    gallery: [],
     stats: [
       { value: '实地调研', label: '发现问题', desc: '梳理摊位视觉痛点' },
       { value: '分色系统', label: '品类区分', desc: '蔬菜绿 / 肉类红' },

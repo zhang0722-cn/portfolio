@@ -80,7 +80,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           </div>
         </section>
 
-        <section className="mt-20">
+        <section className={project.contentImages?.length || project.gallery.length > 0 ? 'mt-20' : 'hidden'}>
           <h2 className="display text-2xl font-bold">{project.contentImages ? '项目内容' : '项目图集'}</h2>
           {project.contentImages ? (
             <>
