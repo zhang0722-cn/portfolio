@@ -21,6 +21,7 @@ export type Project = {
   responsibilities: { title: string; items: string[] }[];
   results: string[];
   gallery: string[];
+  endDocument?: { src: string; title: string; description?: string };
   stats: { value: string; label: string; desc?: string }[];
 };
 
@@ -101,6 +102,11 @@ export const projects: Project[] = [
       'longhushan-content/content-07.jpg',
       'longhushan-content/content-08.jpg',
     ],
+    endDocument: {
+      src: 'visual-zhanghaolei-web.pdf',
+      title: '主题设计综合实训答辩手册',
+      description: '完整 74 页作品集文档，可在页面内浏览或下载查看。',
+    },
     gallery: [
       'longhushan-cover.jpg',
       'https://images.pexels.com/photos/4464879/pexels-photo-4464879.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',

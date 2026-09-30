@@ -152,6 +152,20 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           </section>
         )}
 
+        {project.endDocument && (
+          <section className="mt-20">
+            <div className="flex flex-col gap-4 border-t pt-8 md:flex-row md:items-end md:justify-between" style={{ borderColor: 'var(--line)' }}>
+              <div>
+                <p className="eyebrow mb-3">完整文档</p>
+                <h2 className="display text-2xl font-bold md:text-3xl">{project.endDocument.title}</h2>
+              </div>
+              <a href={project.endDocument.src} target="_blank" rel="noreferrer" className="text-sm font-semibold" style={{ color: 'var(--accent)' }}>在新窗口打开 PDF</a>
+            </div>
+            {project.endDocument.description && <p className="mt-5 text-sm leading-7" style={{ color: 'var(--muted)' }}>{project.endDocument.description}</p>}
+            <iframe title={project.endDocument.title} src={`${project.endDocument.src}#view=FitH`} loading="lazy" className="mt-8 h-[72vh] min-h-[560px] w-full" style={{ border: '1px solid var(--line)', borderRadius: 'var(--radius-lg)' }} />
+          </section>
+        )}
+
         <div className="mt-20 grid grid-cols-1 gap-4 border-t pt-8 md:grid-cols-2" style={{ borderColor: 'var(--line)' }}>
           {prev ? (
             <a href={`#/project/${prev.id}`} className="group block">
