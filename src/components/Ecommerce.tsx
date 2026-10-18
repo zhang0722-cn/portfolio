@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import ResponsiveImage from './ResponsiveImage';
 
 type Artwork = {
   src: string;
@@ -7,6 +8,7 @@ type Artwork = {
   meta: string;
   alt: string;
   span: string;
+  sizes: string;
 };
 
 const campaignArtworks: Artwork[] = [
@@ -16,6 +18,7 @@ const campaignArtworks: Artwork[] = [
     meta: '活动主视觉 · 16:9',
     alt: '黄色背景的披萨促销活动横幅',
     span: 'lg:col-span-8',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 67vw',
   },
   {
     src: 'ecommerce/ecommerce-promo-poster.jpeg',
@@ -23,6 +26,7 @@ const campaignArtworks: Artwork[] = [
     meta: '下单转化 · 9:16',
     alt: '黄色背景的披萨促销活动页面，展示价格与下单按钮',
     span: 'lg:col-span-4',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw',
   },
 ];
 
@@ -33,6 +37,7 @@ const onlineArtworks: Artwork[] = [
     meta: '产品视觉 · 9:16',
     alt: '披萨与虾、牛油果等食材组合的新品竖版海报',
     span: 'lg:col-span-3',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
   },
   {
     src: 'ecommerce/ecommerce-detail-screen.jpeg',
@@ -40,6 +45,7 @@ const onlineArtworks: Artwork[] = [
     meta: '电商详情 · 9:16',
     alt: '展示披萨卖点与配料的商品详情页首屏',
     span: 'lg:col-span-3',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
   },
   {
     src: 'ecommerce/ecommerce-mobile-store.jpeg',
@@ -47,6 +53,7 @@ const onlineArtworks: Artwork[] = [
     meta: '移动端转化 · 9:16',
     alt: '披萨外卖活动页面设计',
     span: 'lg:col-span-3',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
   },
   {
     src: 'ecommerce/ecommerce-short-video.jpeg',
@@ -54,6 +61,7 @@ const onlineArtworks: Artwork[] = [
     meta: '内容传播 · 9:16',
     alt: '披萨产品短视频竖版封面',
     span: 'lg:col-span-3',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
   },
 ];
 
@@ -64,6 +72,7 @@ const touchpointArtworks: Artwork[] = [
     meta: '包装应用 · 4:3',
     alt: '披萨外卖盒、手提袋和纸张组成的包装展示',
     span: 'lg:col-span-6',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw',
   },
   {
     src: 'ecommerce/ecommerce-coupon-a.jpeg',
@@ -71,6 +80,7 @@ const touchpointArtworks: Artwork[] = [
     meta: '促销物料 · 3:2',
     alt: '披萨品牌优惠兑换卡设计',
     span: 'lg:col-span-3',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
   },
   {
     src: 'ecommerce/ecommerce-flyer.jpeg',
@@ -78,6 +88,7 @@ const touchpointArtworks: Artwork[] = [
     meta: '印刷物料 · 7:10',
     alt: '包含披萨产品、品牌信息与二维码的纸质宣传单',
     span: 'lg:col-span-3',
+    sizes: '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw',
   },
 ];
 
@@ -94,8 +105,9 @@ function ArtworkFigure({ artwork, index }: { artwork: Artwork; index: number }) 
       className={artwork.span}
     >
       <div className="group overflow-hidden" style={{ background: 'var(--paper)', borderRadius: 'var(--radius-lg)' }}>
-        <img
+        <ResponsiveImage
           src={artwork.src}
+          sizes={artwork.sizes}
           alt={artwork.alt}
           loading="lazy"
           decoding="async"
@@ -145,7 +157,7 @@ export default function Ecommerce() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.45fr_.55fr]">
           <figure>
             <div className="overflow-hidden" style={{ background: '#e9dfd1', borderRadius: 'var(--radius-lg)' }}>
-              <img src="ecommerce/ecommerce-hero-kv.jpeg" alt="披萨新品首页横幅主视觉，展示促销信息和披萨产品" fetchPriority="high" className="block h-auto w-full" />
+              <ResponsiveImage src="ecommerce/ecommerce-hero-kv.jpeg" sizes="(max-width: 1024px) 100vw, 65vw" alt="披萨新品首页横幅主视觉，展示促销信息和披萨产品" fetchPriority="high" className="block h-auto w-full" />
             </div>
             <figcaption className="mt-3 flex items-baseline justify-between gap-4 border-t pt-3" style={{ borderColor: 'var(--line)' }}>
               <span className="text-sm font-semibold">首页横幅 KV</span>

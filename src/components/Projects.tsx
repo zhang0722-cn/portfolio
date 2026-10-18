@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { projects } from '../data/projects';
+import ResponsiveImage from './ResponsiveImage';
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
@@ -66,7 +67,7 @@ function EcommerceCard() {
     <article className="border-t pt-5" style={{ borderColor: 'var(--line)' }}>
       <div className="grid items-center gap-6 lg:grid-cols-[7fr_5fr]">
         <a href="#/project/ecommerce" className="block overflow-hidden" style={{ borderRadius: 'var(--radius-lg)' }}>
-          <img src="ecommerce/ecommerce-hero-kv.jpeg" alt="披萨品牌电商视觉概念提案" loading="lazy" className="block h-auto w-full transition-opacity duration-500 hover:opacity-90" />
+          <ResponsiveImage src="ecommerce/ecommerce-hero-kv.jpeg" sizes="(max-width: 1024px) 100vw, 58vw" alt="披萨品牌电商视觉概念提案" loading="lazy" className="block h-auto w-full transition-opacity duration-500 hover:opacity-90" />
         </a>
         <div>
           <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>电商视觉 · 概念提案</span><span>2026</span></div>
