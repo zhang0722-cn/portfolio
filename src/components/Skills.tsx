@@ -66,7 +66,7 @@ export default function Skills() {
 
       <div className="section-shell mt-12">
         <p className="eyebrow mb-5">相关证明</p>
-        <p className="mb-6 text-sm leading-7" style={{ color: 'var(--muted)' }}>奖学金与相关证明材料，点击可放大查看。</p>
+        <p className="mb-6 text-sm leading-7" style={{ color: 'var(--muted)' }}>点击可放大查看。</p>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
           {certificates.map((src, index) => (
             <button key={src} onClick={() => setActive(index)} aria-label={`放大查看相关证明 ${index + 1}`} aria-expanded={active === index} className="overflow-hidden text-left" style={{ borderRadius: 'var(--radius-md)' }}>
