@@ -61,15 +61,39 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   );
 }
 
+function EcommerceCard() {
+  return (
+    <article className="border-t pt-5" style={{ borderColor: 'var(--line)' }}>
+      <div className="grid items-center gap-6 lg:grid-cols-[7fr_5fr]">
+        <a href="#/project/ecommerce" className="block overflow-hidden" style={{ borderRadius: 'var(--radius-lg)' }}>
+          <img src="ecommerce/ecommerce-hero-kv.jpeg" alt="披萨品牌电商视觉概念提案" loading="lazy" className="block h-auto w-full transition-opacity duration-500 hover:opacity-90" />
+        </a>
+        <div>
+          <div className="flex items-center justify-between text-xs" style={{ color: 'var(--muted)' }}><span>电商视觉 · 概念提案</span><span>2026</span></div>
+          <h3 className="display mt-5 text-3xl font-bold md:text-5xl">电商视觉概念提案</h3>
+          <p className="mt-4 max-w-xl text-sm leading-7" style={{ color: 'var(--muted)' }}>围绕披萨新品，将首页横幅延展到促销页面、商品详情、外卖包装与印刷物料。点击查看 10 张视觉应用。</p>
+          <div className="mt-5 flex flex-wrap gap-3 border-t pt-4 text-xs" style={{ borderColor: 'var(--line)', color: 'var(--accent)' }}>
+            <span>首页 KV</span><span>活动转化</span><span>品牌触点</span>
+          </div>
+          <a href="#/project/ecommerce" className="mt-5 inline-block text-sm font-semibold" style={{ color: 'var(--accent)' }}>查看项目详情</a>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="py-20 md:py-28">
       <div className="section-shell">
         <div className="mb-10 flex items-end justify-between gap-8">
           <div><p className="eyebrow mb-5">精选项目</p><h2 className="display text-4xl font-bold md:text-6xl">作品展示</h2></div>
-          <p className="hidden max-w-sm text-sm leading-7 md:block" style={{ color: 'var(--muted)' }}>三个完整项目，覆盖品牌识别、字体设计与实际物料落地。</p>
+          <p className="hidden max-w-sm text-sm leading-7 md:block" style={{ color: 'var(--muted)' }}>精选品牌、字体、视觉与电商设计项目，呈现从概念到应用的不同设计场景。</p>
         </div>
-        <div className="space-y-12 md:space-y-16">{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}</div>
+        <div className="space-y-12 md:space-y-16">
+          {projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}
+          <EcommerceCard />
+        </div>
       </div>
     </section>
   );

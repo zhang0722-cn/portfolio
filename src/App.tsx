@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
+import Ecommerce from './components/Ecommerce';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
@@ -37,7 +38,7 @@ export default function App() {
   return (
     <div style={{ background: 'var(--paper)', minHeight: '100vh' }}>
       <Navbar onViewResume={() => setResumeOpen(true)} />
-      {route.page === 'project' ? <ProjectDetail id={route.id} /> : (
+      {route.page === 'project' ? (route.id === 'ecommerce' ? <Ecommerce /> : <ProjectDetail id={route.id} />) : (
         <main><Hero onViewResume={() => setResumeOpen(true)} /><About /><Projects /><Skills /><Contact onViewResume={() => setResumeOpen(true)} /></main>
       )}
       <ResumeViewer open={resumeOpen} onClose={() => setResumeOpen(false)} />
