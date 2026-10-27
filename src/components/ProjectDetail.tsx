@@ -10,6 +10,7 @@ function getProjectNavItems(project: Project | undefined): ProjectNavItem[] {
     { id: 'project-intro', label: '项目简介' },
   ];
   if (project.contentImages?.length || project.gallery.length > 0) items.push({ id: 'project-gallery', label: project.contentImages?.length ? '项目内容' : '项目图集' });
+  if (project.motionGallery?.length) items.push({ id: 'motion-gallery', label: '动态场景' });
   items.push({ id: 'project-role', label: '工作内容' }, { id: 'project-results', label: '项目成果' });
   if (project.endDocument) items.push({ id: 'project-document', label: '完整文档' });
   return items;
@@ -108,7 +109,7 @@ export default function ProjectDetail({ id }: { id: string | null }) {
           </div>
         </section>
 
-        <section className={project.contentImages?.length || project.gallery.length > 0 ? 'mt-20' : 'hidden'}>
+        <section id="project-gallery" className={project.contentImages?.length || project.gallery.length > 0 ? 'mt-20 scroll-mt-28' : 'hidden'}>
           <h2 className="display text-2xl font-bold">{project.contentImages ? '项目内容' : '项目图集'}</h2>
           {project.contentImages ? (
             <>
@@ -130,6 +131,36 @@ export default function ProjectDetail({ id }: { id: string | null }) {
               ))}
             </div>
           )}
+
+          {project.motionGallery?.length ? (
+            <section id="motion-gallery" className="mt-20 scroll-mt-28">
+              <div className="flex items-end justify-between gap-6 border-b pb-5" style={{ borderColor: 'var(--line)' }}>
+                <div>
+                  <p className="eyebrow mb-3">PLAYFUL BRAND WORLD</p>
+                  <h3 className="display text-2xl font-bold md:text-4xl">品牌动态场景</h3>
+                </div>
+                <span className="text-xs" style={{ color: 'var(--muted)' }}>场景延展 / 06</span>
+              </div>
+              <div className="mt-8 grid grid-cols-1 items-start gap-x-6 gap-y-10 md:grid-cols-3">
+                {project.motionGallery.map((item, i) => (
+                  <figure key={item.src} className={i === 0 ? 'md:col-span-3' : ''}>
+                    <picture>
+                      <source media="(prefers-reduced-motion: reduce)" srcSet={item.poster} />
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className={`block h-auto w-full object-contain ${i === 0 ? 'mx-auto max-w-5xl' : ''}`}
+                        style={{ aspectRatio: i === 0 ? '16 / 9' : '3 / 4' }}
+                      />
+                    </picture>
+                    <figcaption className="mt-3 text-xs" style={{ color: 'var(--muted)' }}>{item.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          ) : null}
         </section>
 
         <section id="project-role" className="mt-20 scroll-mt-28">

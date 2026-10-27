@@ -11,6 +11,7 @@ export type Project = {
   coverRatio?: string;
   contentImages?: string[];
   resultsImages?: string[];
+  motionGallery?: { src: string; poster: string; alt: string; caption: string }[];
   client?: string;
   role: string;
   cardTitle?: string;
@@ -236,6 +237,83 @@ export const projects: Project[] = [
       { value: '分色系统', label: '品类区分', desc: '蔬菜绿 / 肉类红' },
       { value: '统一规范', label: '灯牌标准', desc: '字体 / 色彩 / 尺寸' },
       { value: 'AI + PS', label: '效果输出', desc: '效果图与制作文件' },
+    ],
+  },
+  {
+    id: 4,
+    title: '「团小冰」儿童冰淇淋品牌提案',
+    cardTitle: '项目四',
+    category: '品牌设计',
+    tags: ['品牌理念', 'Logo 设计', '手绘包装', 'IP 视觉'],
+    desc: '以儿童涂鸦为核心视觉语言，为街角儿童冰淇淋品牌构建轻松、亲民的品牌识别，并延展至产品包装、店铺物料与主题周边。',
+    year: '2026',
+    img: 'tuanbing/tuanbing-01.jpg',
+    coverRatio: '16/9',
+    accent: '#EA580C',
+    size: 'small',
+    role: '全案设计师',
+    status: '概念方案',
+    period: '两周',
+    overview:
+      '「团小冰」以街角平价冰淇淋为定位，提出一个为儿童保留自由表达的空间：不追求精致标准与高价体验，而以现挖冰淇淋、孩子的涂鸦和白纸杯传递真实、轻松的童年快乐。',
+    background: [
+      '在标准化、精致化的商业街景中，为儿童提供一个可以自在停留和表达的轻松角落。',
+      '以“孩子的涂鸦”作为品牌视觉语言，让手绘笔触成为区别于成人世界规整视觉的识别特征。',
+      '将亲民、简单的消费体验转译为直观的产品和店铺视觉触点。',
+    ],
+    responsibilities: [
+      {
+        title: '品牌理念与识别设计',
+        items: [
+          '围绕“把孩子的杰作捧在手心”梳理品牌表达与核心口号',
+          '完成「团小冰」中文字标及中英文品牌视觉方向',
+          '以天空蓝、淡黄色和手绘笔触建立品牌标准色与辅助视觉语言',
+        ],
+      },
+      {
+        title: 'IP 形象与包装延展',
+        items: [
+          '设计冰淇淋角色及儿童涂鸦风格的图形应用',
+          '将手绘视觉延展到冰淇淋杯、手提袋和主题周边',
+          '通过角色、涂鸦和包装信息保持不同物料间的统一性',
+        ],
+      },
+      {
+        title: '店铺与产品信息物料',
+        items: [
+          '设计店铺招牌、欢迎指引及空间提示物料',
+          '为口味和价格信息设计手写风格展示画面',
+          '形成覆盖品牌识别、产品包装和店铺触点的概念视觉方案',
+        ],
+      },
+    ],
+    results: [
+      '完成「团小冰」儿童冰淇淋品牌概念及视觉识别方向',
+      '形成包含字标、标准色、手绘 IP、包装、招牌和产品信息物料的延展方案',
+      '本项目为概念提案，素材未说明实际落地或经营数据',
+    ],
+    gallery: [
+      'tuanbing/tuanbing-02.jpg',
+      'tuanbing/tuanbing-03.jpg',
+      'tuanbing/tuanbing-04.jpg',
+      'tuanbing/tuanbing-05.jpg',
+      'tuanbing/tuanbing-06.jpg',
+      'tuanbing/tuanbing-07.jpg',
+      'tuanbing/tuanbing-08.jpg',
+    ],
+    motionGallery: [
+      { src: 'tuanbing/motion/playground.gif', poster: 'tuanbing/motion/playground-poster.webp', alt: '儿童涂鸦角色在游乐场中玩耍的循环动画', caption: '涂鸦游乐场' },
+      { src: 'tuanbing/motion/green-chick.gif', poster: 'tuanbing/motion/green-chick-poster.webp', alt: '绿色小鸡角色在弹簧座椅上摇摆的动画', caption: '绿色小鸡弹簧摇摇乐' },
+      { src: 'tuanbing/motion/orange-plane.gif', poster: 'tuanbing/motion/orange-plane-poster.webp', alt: '儿童涂鸦角色乘坐橙色飞机弹簧骑乘玩具的动画', caption: '橙色飞机弹簧骑乘' },
+      { src: 'tuanbing/motion/pink-chick.gif', poster: 'tuanbing/motion/pink-chick-poster.webp', alt: '粉色小鸡角色在弹簧座椅上摇摆的动画', caption: '粉色小鸡弹簧摇摇乐' },
+      { src: 'tuanbing/motion/wave-slide.gif', poster: 'tuanbing/motion/wave-slide-poster.webp', alt: '儿童涂鸦角色沿波浪滑梯滑下的动画', caption: '波浪滑梯' },
+      { src: 'tuanbing/motion/blue-tunnel.gif', poster: 'tuanbing/motion/blue-tunnel-poster.webp', alt: '儿童涂鸦角色穿过蓝色弯管滑梯的动画', caption: '蓝色弯管滑梯' },
+    ],
+    stats: [
+      { value: '儿童视角', label: '品牌理念', desc: '把孩子的杰作捧在手心' },
+      { value: '手绘涂鸦', label: '视觉语言', desc: '以自由笔触建立识别特征' },
+      { value: '产品包装', label: '包装应用', desc: '冰淇淋杯与主题手提袋' },
+      { value: '店铺物料', label: '触点延展', desc: '招牌、指引与口味价格展示' },
     ],
   },
 ];
